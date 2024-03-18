@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>librepcb::editor::BoardViaPropertiesDialog</class>
+ <widget class="QDialog" name="librepcb::editor::BoardViaPropertiesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>551</width>
+    <height>214</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Via Properties</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Net Signal:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="lblNetSignal">
+       <property name="text">
+        <string notr="true">-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Position:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="librepcb::editor::LengthEdit" name="edtPosX" native="true"/>
+       </item>
+       <item>
+        <widget class="librepcb::editor::LengthEdit" name="edtPosY" native="true"/>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Outer Diameter:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="librepcb::editor::PositiveLengthEdit" name="edtSize" native="true"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Drill Diameter:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="librepcb::editor::PositiveLengthEdit" name="edtDrillDiameter" native="true"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Start Layer:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="librepcb::editor::LayerComboBox" name="cbxStartLayer" native="true"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>End Layer:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="librepcb::editor::LayerComboBox" name="cbxEndLayer" native="true"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Exposure:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QRadioButton" name="rbtnExposureOff">
+         <property name="toolTip">
+          <string>The copper area of the via is covered with solder resist, i.e. not exposed.</string>
+         </property>
+         <property name="text">
+          <string>Off</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="rbtnExposureAuto">
+         <property name="toolTip">
+          <string>A solder resist opening is created to expose the via. The clearance is taken from the board design rules.</string>
+         </property>
+         <property name="text">
+          <string>From Design Rules</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="rbtnExposureManual">
+         <property name="toolTip">
+          <string>A solder resist opening with a custom clearance is created to expose the via.</string>
+         </property>
+         <property name="text">
+          <string>Manual:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="librepcb::editor::LengthEdit" name="edtExposureOffset" native="true">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>librepcb::editor::PositiveLengthEdit</class>
+   <extends>QWidget</extends>
+   <header location="global">librepcb/editor/widgets/positivelengthedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>librepcb::editor::LengthEdit</class>
+   <extends>QWidget</extends>
+   <header location="global">librepcb/editor/widgets/lengthedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>librepcb::editor::LayerComboBox</class>
+   <extends>QWidget</extends>
+   <header location="global">librepcb/editor/widgets/layercombobox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>edtPosX</tabstop>
+  <tabstop>edtPosY</tabstop>
+  <tabstop>edtSize</tabstop>
+  <tabstop>edtDrillDiameter</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

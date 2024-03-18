@@ -1,0 +1,95 @@
+**/.DS_Store
+.idea/
+.vs/
+.vscode/
+build/
+cmake-build-*/
+prefix/
+.clangd
+CMakeLists.txt.user
+CMakeUserPresets.json
+compile_commands.json
+.cache
+*.sqlite
+*.db
+/.cache
+/bin
+/compile_commands.json
+/dist
+
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+data
+*~
+*.autosave
+*.a
+*.core
+*.moc
+*.o
+*.obj
+*.orig
+*.rej
+*.so
+*.so.*
+langs
+*_pch.h.cpp
+*_resource.rc
+*.qm
+.#*
+*.*#
+core
+!core/
+tags
+.DS_Store
+.directory
+*.debug
+Makefile*
+*.prl
+*.app
+moc_*.cpp
+qrc_*.cpp
+Thumbs.db
+*.res
+/.qmake.cache
+/.qmake.stash
+
+# qtcreator generated files
+*.pro.user*
+
+# xemacs temporary files
+*.flc
+
+# Vim temporary files
+.*.swp
+
+# Visual Studio generated files
+*.ib_pdb_index
+*.idb
+*.ilk
+*.pdb
+*.sln
+*.suo
+*.vcproj
+*vcproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj
+*vcxproj.*
+
+# MinGW generated files
+*.Debug
+*.Release
+
+# Python byte code
+*.pyc
+
+# Binaries
+# --------
+*.dll
+*.exe
+
+build
+*.user
+.vscode
+*.ini

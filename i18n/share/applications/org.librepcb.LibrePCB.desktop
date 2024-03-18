@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=LibrePCB
+Comment=Design Schematics and PCBs
+GenericName=PCB Designer
+Categories=Development;Engineering;Electronics;
+Type=Application
+Terminal=false
+Icon=org.librepcb.LibrePCB
+Exec=librepcb %U
+MimeType=application/x-librepcb-project;application/x-librepcb-project-archive;
+Comment[de]=Entwerfen eines Schaltplans oder einer Platine
+Comment[uk_UA]=Проектування схем та плат
