@@ -1,4 +1,4 @@
-########################################################################
+# #######################################################################
 # Note: CMake support is community-based. The maintainers do not use CMake
 # internally.
 #
@@ -11,7 +11,7 @@
 option(gmock_build_tests "Build all of Google Mock's own tests." OFF)
 
 # A directory to find Google Test sources.
-if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/gtest/CMakeLists.txt")
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/gtest/CMakeLists.txt")
   set(gtest_dir gtest)
 else()
   set(gtest_dir ../googletest)
@@ -20,13 +20,13 @@ endif()
 # Defines pre_project_set_up_hermetic_build() and set_up_hermetic_build().
 include("${gtest_dir}/cmake/hermetic_build.cmake" OPTIONAL)
 
-if (COMMAND pre_project_set_up_hermetic_build)
+if(COMMAND pre_project_set_up_hermetic_build)
   # Google Test also calls hermetic setup functions from add_subdirectory,
   # although its changes will not affect things at the current scope.
   pre_project_set_up_hermetic_build()
 endif()
 
-########################################################################
+# #######################################################################
 #
 # Project-wide settings
 
@@ -36,15 +36,16 @@ endif()
 # as ${gmock_SOURCE_DIR} and to the root binary directory as
 # ${gmock_BINARY_DIR}.
 # Language "C" is required for find_package(Threads).
-if (CMAKE_VERSION VERSION_LESS 3.0)
+if(CMAKE_VERSION VERSION_LESS 3.0)
   project(gmock CXX C)
 else()
   cmake_policy(SET CMP0048 NEW)
   project(gmock VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
 endif()
-cmake_minimum_required(VERSION 3.2)
 
-if (COMMAND set_up_hermetic_build)
+cmake_minimum_required(VERSION 3.5...3.19)
+
+if(COMMAND set_up_hermetic_build)
   set_up_hermetic_build()
 endif()
 
@@ -53,7 +54,6 @@ endif()
 # directory in a subdirectory of our own as VC compilation may break
 # if they are the same (the default).
 add_subdirectory("${gtest_dir}" "${gmock_BINARY_DIR}/${gtest_dir}")
-
 
 # These commands only run if this is the main project
 if(CMAKE_PROJECT_NAME STREQUAL "gmock" OR CMAKE_PROJECT_NAME STREQUAL "googletest-distribution")
@@ -67,18 +67,19 @@ endif()
 # Although Google Test's CMakeLists.txt calls this function, the
 # changes there don't affect the current scope.  Therefore we have to
 # call it again here.
-config_compiler_and_linker()  # from ${gtest_dir}/cmake/internal_utils.cmake
+config_compiler_and_linker() # from ${gtest_dir}/cmake/internal_utils.cmake
 
 # Adds Google Mock's and Google Test's header directories to the search path.
 set(gmock_build_include_dirs
   "${gmock_SOURCE_DIR}/include"
   "${gmock_SOURCE_DIR}"
   "${gtest_SOURCE_DIR}/include"
+
   # This directory is needed to build directly from Google Test sources.
   "${gtest_SOURCE_DIR}")
 include_directories(${gmock_build_include_dirs})
 
-########################################################################
+# #######################################################################
 #
 # Defines the gmock & gmock_main libraries.  User tests should link
 # with one of them.
@@ -86,17 +87,17 @@ include_directories(${gmock_build_include_dirs})
 # Google Mock libraries.  We build them using more strict warnings than what
 # are used for other targets, to ensure that Google Mock can be compiled by
 # a user aggressive about warnings.
-if (MSVC)
+if(MSVC)
   cxx_library(gmock
-              "${cxx_strict}"
-              "${gtest_dir}/src/gtest-all.cc"
-              src/gmock-all.cc)
+    "${cxx_strict}"
+    "${gtest_dir}/src/gtest-all.cc"
+    src/gmock-all.cc)
 
   cxx_library(gmock_main
-              "${cxx_strict}"
-              "${gtest_dir}/src/gtest-all.cc"
-              src/gmock-all.cc
-              src/gmock_main.cc)
+    "${cxx_strict}"
+    "${gtest_dir}/src/gtest-all.cc"
+    src/gmock-all.cc
+    src/gmock_main.cc)
 else()
   cxx_library(gmock "${cxx_strict}" src/gmock-all.cc)
   target_link_libraries(gmock PUBLIC gtest)
@@ -105,10 +106,11 @@ else()
   target_link_libraries(gmock_main PUBLIC gmock)
   set_target_properties(gmock_main PROPERTIES VERSION ${GOOGLETEST_VERSION})
 endif()
+
 # If the CMake version supports it, attach header directory information
 # to the targets for when we are part of a parent build (ie being pulled
 # in via add_subdirectory() rather than being a standalone build).
-if (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
+if(DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
   target_include_directories(gmock SYSTEM INTERFACE
     "$<BUILD_INTERFACE:${gmock_build_include_dirs}>"
     "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>")
@@ -117,12 +119,12 @@ if (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")
     "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>")
 endif()
 
-########################################################################
+# #######################################################################
 #
 # Install rules
 install_project(gmock gmock_main)
 
-########################################################################
+# #######################################################################
 #
 # Google Mock's own tests.
 #
@@ -132,23 +134,21 @@ install_project(gmock gmock_main)
 # The tests are not built by default.  To build them, set the
 # gmock_build_tests option to ON.  You can do it by running ccmake
 # or specifying the -Dgmock_build_tests=ON flag when running cmake.
-
-if (gmock_build_tests)
+if(gmock_build_tests)
   # This must be set in the root directory for the tests to be run by
   # 'make test' or ctest.
   enable_testing()
 
-  if (MINGW OR CYGWIN)
-    if (CMAKE_VERSION VERSION_LESS "2.8.12")
+  if(MINGW OR CYGWIN)
+    if(CMAKE_VERSION VERSION_LESS "2.8.12")
       add_compile_options("-Wa,-mbig-obj")
     else()
       add_definitions("-Wa,-mbig-obj")
     endif()
   endif()
 
-  ############################################################
+  # ###########################################################
   # C++ tests built with standard compiler flags.
-
   cxx_test(gmock-actions_test gmock_main)
   cxx_test(gmock-cardinalities_test gmock_main)
   cxx_test(gmock_ex_test gmock_main)
@@ -163,7 +163,7 @@ if (gmock_build_tests)
   cxx_test(gmock_link_test gmock_main test/gmock_link2_test.cc)
   cxx_test(gmock_test gmock_main)
 
-  if (DEFINED GTEST_HAS_PTHREAD)
+  if(DEFINED GTEST_HAS_PTHREAD)
     cxx_test(gmock_stress_test gmock)
   endif()
 
@@ -171,10 +171,9 @@ if (gmock_build_tests)
   # Uncomment if necessary.
   # cxx_test(gmock_all_test gmock_main)
 
-  ############################################################
+  # ###########################################################
   # C++ tests built with non-standard compiler flags.
-
-  if (MSVC)
+  if(MSVC)
     cxx_library(gmock_main_no_exception "${cxx_no_exception}"
       "${gtest_dir}/src/gtest-all.cc" src/gmock-all.cc src/gmock_main.cc)
 
@@ -188,6 +187,7 @@ if (gmock_build_tests)
     cxx_library(gmock_main_no_rtti "${cxx_no_rtti}" src/gmock_main.cc)
     target_link_libraries(gmock_main_no_rtti PUBLIC gmock)
   endif()
+
   cxx_test_with_flags(gmock-more-actions_no_exception_test "${cxx_no_exception}"
     gmock_main_no_exception test/gmock-more-actions_test.cc)
 
@@ -208,9 +208,8 @@ if (gmock_build_tests)
     PROPERTIES
     COMPILE_DEFINITIONS "GTEST_LINKED_AS_SHARED_LIBRARY=1")
 
-  ############################################################
+  # ###########################################################
   # Python tests.
-
   cxx_executable(gmock_leak_test_ test gmock_main)
   py_test(gmock_leak_test)
 

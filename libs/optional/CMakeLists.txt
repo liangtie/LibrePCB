@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5...3.19)
 
 project(optional)
 
@@ -16,19 +16,19 @@ if(OPTIONAL_ENABLE_TESTS)
 
   # Make test executable
   set(TEST_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/tests/main.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/noexcept.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/make_optional.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/in_place.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/relops.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/observers.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/extensions.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/emplace.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/constexpr.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/constructors.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/assignment.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/issues.cpp  
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/bases.cpp
-                   ${CMAKE_CURRENT_SOURCE_DIR}/tests/nullopt.cpp)
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/noexcept.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/make_optional.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/in_place.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/relops.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/observers.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/extensions.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/emplace.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/constexpr.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/constructors.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/assignment.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/issues.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/bases.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/tests/nullopt.cpp)
 
   add_executable(tests ${TEST_SOURCES})
 
@@ -37,4 +37,3 @@ if(OPTIONAL_ENABLE_TESTS)
   set(CXXSTD 14 CACHE STRING "C++ standard to use, default C++14")
   set_property(TARGET tests PROPERTY CXX_STANDARD ${CXXSTD})
 endif()
-

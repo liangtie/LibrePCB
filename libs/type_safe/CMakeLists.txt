@@ -2,7 +2,7 @@
 # This file is subject to the license terms in the LICENSE file
 # found in the top-level directory of this distribution.
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5...3.19)
 
 project(TYPE_SAFE)
 
@@ -16,6 +16,7 @@ else()
 endif()
 
 option(TYPE_SAFE_ENABLE_ASSERTIONS "whether or not to enable internal assertions for the type_safe library" ${_type_safe_default_assertions})
+
 if(${TYPE_SAFE_ENABLE_ASSERTIONS})
     set(_type_safe_enable_assertions 1)
 else()
@@ -23,6 +24,7 @@ else()
 endif()
 
 option(TYPE_SAFE_ENABLE_PRECONDITION_CHECKS "whether or not to enable precondition checks" ON)
+
 if(${TYPE_SAFE_ENABLE_PRECONDITION_CHECKS})
     set(_type_safe_enable_precondition_checks 1)
 else()
@@ -30,6 +32,7 @@ else()
 endif()
 
 option(TYPE_SAFE_ENABLE_WRAPPER "whether or not the wrappers in types.hpp are used" ON)
+
 if(${TYPE_SAFE_ENABLE_WRAPPER})
     set(_type_safe_enable_wrapper 1)
 else()
@@ -96,24 +99,24 @@ target_sources(type_safe INTERFACE "$<BUILD_INTERFACE:${detail_header_files};${h
 target_include_directories(type_safe INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>)
 target_include_directories(type_safe SYSTEM INTERFACE $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/include>)
 target_compile_definitions(type_safe INTERFACE
-                                     TYPE_SAFE_ENABLE_ASSERTIONS=${_type_safe_enable_assertions}
-                                     TYPE_SAFE_ENABLE_PRECONDITION_CHECKS=${_type_safe_enable_precondition_checks}
-                                     TYPE_SAFE_ENABLE_WRAPPER=${_type_safe_enable_wrapper}
-                                     TYPE_SAFE_ARITHMETIC_POLICY=${_type_safe_arithmetic_policy})
+    TYPE_SAFE_ENABLE_ASSERTIONS=${_type_safe_enable_assertions}
+    TYPE_SAFE_ENABLE_PRECONDITION_CHECKS=${_type_safe_enable_precondition_checks}
+    TYPE_SAFE_ENABLE_WRAPPER=${_type_safe_enable_wrapper}
+    TYPE_SAFE_ARITHMETIC_POLICY=${_type_safe_arithmetic_policy})
 target_link_libraries(type_safe INTERFACE debug_assert)
 
 if(MSVC)
-   target_compile_options(type_safe INTERFACE /wd4800) # truncation to bool warning
+    target_compile_options(type_safe INTERFACE /wd4800) # truncation to bool warning
 endif()
 
 # Setup package config
-include( CMakePackageConfigHelpers )
+include(CMakePackageConfigHelpers)
 set(CONFIG_PACKAGE_INSTALL_DIR lib/cmake/type_safe)
 
 write_basic_package_version_file(
-  ${CMAKE_CURRENT_BINARY_DIR}/type_safe-config-version.cmake
-  VERSION 0.2.2
-  COMPATIBILITY SameMajorVersion
+    ${CMAKE_CURRENT_BINARY_DIR}/type_safe-config-version.cmake
+    VERSION 0.2.2
+    COMPATIBILITY SameMajorVersion
 )
 
 # Install target
@@ -125,29 +128,30 @@ if(TYPE_SAFE_HAS_IMPORTED_TARGETS)
         EXPORT type_safe-targets
         DESTINATION lib)
 
-    install( EXPORT type_safe-targets
-      DESTINATION
+    install(EXPORT type_safe-targets
+        DESTINATION
         ${CONFIG_PACKAGE_INSTALL_DIR}
     )
 
-    install( FILES
-      ${CMAKE_CURRENT_SOURCE_DIR}/type_safe-config.cmake
-      ${CMAKE_CURRENT_BINARY_DIR}/type_safe-config-version.cmake
-      DESTINATION
-        ${CONFIG_PACKAGE_INSTALL_DIR} )
-
+    install(FILES
+        ${CMAKE_CURRENT_SOURCE_DIR}/type_safe-config.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/type_safe-config-version.cmake
+        DESTINATION
+        ${CONFIG_PACKAGE_INSTALL_DIR})
 endif()
 
 # other subdirectories
 # only add if not inside add_subdirectory()
 option(TYPE_SAFE_BUILD_TEST_EXAMPLE "build test and example" ON)
-if(${TYPE_SAFE_BUILD_TEST_EXAMPLE} AND (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR))
+
+if(${TYPE_SAFE_BUILD_TEST_EXAMPLE} AND(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR))
     enable_testing()
     add_subdirectory(example/)
     add_subdirectory(test/)
 endif()
 
 option(TYPE_SAFE_BUILD_DOC "generate documentation" OFF)
+
 if(TYPE_SAFE_BUILD_DOC)
     add_subdirectory(doc/)
 endif()

@@ -22,8 +22,7 @@
     },
     {
       "name": "dev-mode",
-      "hidden": true,
-      "inherits": "cmake-pedantic"
+      "hidden": true
     },
     {
       "name": "release-mode",
@@ -72,7 +71,8 @@
         "CMAKE_CXX_STANDARD": "17",
         "CMAKE_CXX_STANDARD_REQUIRED": "ON",
         "CMAKE_SKIP_INSTALL_RULES": true,
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "USE_OPENCASCADE" : "OFF"
       }
     },
     {
