@@ -5,22 +5,22 @@ set(CMAKE_AUTORCC OFF)
 
 # Allow specifying the author of the build to help investigating bug reports.
 set(LIBREPCB_BUILD_AUTHOR
-    ""
-    CACHE STRING "Author of this build."
+  ""
+  CACHE STRING "Author of this build."
 )
 
 # Allow overriding the share directory path
 set(LIBREPCB_SHARE
-    "../share/librepcb"
-    CACHE STRING "Path to the LibrePCB share directory."
+  "../share/librepcb"
+  CACHE STRING "Path to the LibrePCB share directory."
 )
 
 # Set this to YES to disable some features that make builds non-reproducible
 # (like embedding the git commit hash or the path to the source directory in
 # the binary).
 set(LIBREPCB_REPRODUCIBLE
-    NO
-    CACHE BOOL "Disable feature that make builds non-reproducible"
+  NO
+  CACHE BOOL "Disable feature that make builds non-reproducible"
 )
 
 if(LIBREPCB_REPRODUCIBLE)
@@ -28,10 +28,11 @@ if(LIBREPCB_REPRODUCIBLE)
 else()
   # Detect git commit hash
   find_package(Git)
+
   if(GIT_FOUND AND EXISTS "${CMAKE_SOURCE_DIR}/.git")
     execute_process(
       COMMAND ${GIT_EXECUTABLE} -C "${CMAKE_SOURCE_DIR}" rev-parse --short
-              --verify HEAD
+      --verify HEAD
       OUTPUT_VARIABLE SHORT_SHA
       OUTPUT_STRIP_TRAILING_WHITESPACE
     )
@@ -50,8 +51,8 @@ endif()
 # Set this to YES to enable registering the application to the desktop
 # environment at runtime (e.g. installing *.desktop file on Linux).
 set(LIBREPCB_ENABLE_DESKTOP_INTEGRATION
-    NO
-    CACHE BOOL "Allow registering the application at runtime."
+  NO
+  CACHE BOOL "Allow registering the application at runtime."
 )
 
 # Generate build_env.h file
@@ -509,31 +510,34 @@ target_include_directories(
 target_link_libraries(
   librepcb_core
   PRIVATE common
-          # Third party
-          OpenCascade::OpenCascade
-          DelaunayTriangulation::DelaunayTriangulation
-          Dxflib::Dxflib
-          FontoBene::FontoBeneQt5
-          MuParser::MuParser
-          QuaZip::QuaZip
+
+  # Third party
+  OpenCascade::OpenCascade
+  DelaunayTriangulation::DelaunayTriangulation
+  Dxflib::Dxflib
+  MuParser::MuParser
+  QuaZip::QuaZip
 )
 target_link_libraries(
   librepcb_core
   PUBLIC # Third party
-         Optional::Optional
-         Polyclipping::Polyclipping
-         TypeSafe::TypeSafe
-         # Qt
-         Qt5::Concurrent
-         Qt5::Core
-         Qt5::Gui
-         Qt5::Network
-         Qt5::PrintSupport
-         Qt5::Sql
-         Qt5::Svg
-         # Link with -lproc on SunOS / Solaris / Illumos
-         # This is required for proc_get_psinfo
-         $<$<STREQUAL:$<PLATFORM_ID>,SunOS>:proc>
+  Optional::Optional
+  Polyclipping::Polyclipping
+  TypeSafe::TypeSafe
+
+  # Qt
+  Qt5::Concurrent
+  Qt5::Core
+  Qt5::Gui
+  Qt5::Network
+  Qt5::PrintSupport
+  Qt5::Sql
+  Qt5::Svg
+  FontoBene::FontoBeneQt5
+
+  # Link with -lproc on SunOS / Solaris / Illumos
+  # This is required for proc_get_psinfo
+  $<$<STREQUAL:$<PLATFORM_ID>,SunOS>:proc>
 )
 
 # Alias to namespaced variant

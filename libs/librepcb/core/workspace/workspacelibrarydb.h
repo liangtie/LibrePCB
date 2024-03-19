@@ -63,11 +63,11 @@ public:
     QString manufacturer;
     AttributeList attributes;
 
-    bool operator==(const Part& rhs) const noexcept {
+    bool operator==(const Part &rhs) const noexcept {
       return (mpn == rhs.mpn) && (manufacturer == rhs.manufacturer) &&
-          (attributes == rhs.attributes);
+             (attributes == rhs.attributes);
     }
-    bool operator<(const Part& rhs) const noexcept {
+    bool operator<(const Part &rhs) const noexcept {
       if (mpn.isEmpty() != rhs.mpn.isEmpty()) {
         return mpn.count() < rhs.mpn.count();
       }
@@ -103,7 +103,7 @@ public:
 
   // Constructors / Destructor
   WorkspaceLibraryDb() = delete;
-  WorkspaceLibraryDb(const WorkspaceLibraryDb& other) = delete;
+  WorkspaceLibraryDb(const WorkspaceLibraryDb &other) = delete;
 
   /**
    * @brief Constructor to open the library database of an existing workspace
@@ -113,7 +113,7 @@ public:
    * @throw Exception If the library could not be opened, this constructor
    * throws an exception.
    */
-  explicit WorkspaceLibraryDb(const FilePath& librariesPath);
+  explicit WorkspaceLibraryDb(const FilePath &librariesPath);
   ~WorkspaceLibraryDb() noexcept;
 
   // Getters
@@ -123,7 +123,7 @@ public:
    *
    * @return Path to the *.sqlite file
    */
-  const FilePath& getFilePath() const noexcept { return mFilePath; }
+  const FilePath &getFilePath() const noexcept { return mFilePath; }
 
   /**
    * @brief Check if there is currently a library scan in progress
@@ -153,9 +153,9 @@ public:
    * @return Version and filepath of all elements matching the criteria.
    */
   template <typename ElementType>
-  QMultiMap<Version, FilePath> getAll(
-      const tl::optional<Uuid>& uuid = tl::nullopt,
-      const FilePath& lib = FilePath()) const {
+  QMultiMap<Version, FilePath>
+  getAll(const tl::optional<Uuid> &uuid = tl::nullopt,
+         const FilePath &lib = FilePath()) const {
     return getAll(getTable<ElementType>(), uuid, lib);
   }
 
@@ -168,8 +168,7 @@ public:
    *          specified UUID. If no element is found, an invalid filepath
    *          will be returned.
    */
-  template <typename ElementType>
-  FilePath getLatest(const Uuid& uuid) const {
+  template <typename ElementType> FilePath getLatest(const Uuid &uuid) const {
     return getLatestVersionFilePath(getAll<ElementType>(uuid));
   }
 
@@ -183,9 +182,10 @@ public:
    *          and without duplicates. Empty if no elements were found.
    */
   template <typename ElementType>
-  QList<Uuid> find(const QString& keyword) const {
+  QList<Uuid> find(const QString &keyword) const {
     return find(getTable<ElementType>(), keyword);
   }
+  QList<Uuid> find_pkg(const QString &keyword) const;
 
   /**
    * @brief Find parts by keyword
@@ -196,7 +196,7 @@ public:
    *          alphabetically and without duplicates. Empty if no elements
    *          were found.
    */
-  QList<Uuid> findDevicesOfParts(const QString& keyword) const;
+  QList<Uuid> findDevicesOfParts(const QString &keyword) const;
 
   /**
    * @brief Find parts of device by keyword
@@ -208,8 +208,8 @@ public:
    *          alphabetically and without duplicates. Empty if no elements
    *          were found or the device doesn't exist.
    */
-  QList<Part> findPartsOfDevice(const Uuid& device,
-                                const QString& keyword) const;
+  QList<Part> findPartsOfDevice(const Uuid &device,
+                                const QString &keyword) const;
 
   /**
    * @brief Get translations of a specific element
@@ -232,9 +232,9 @@ public:
    *                      translations ar all.
    */
   template <typename ElementType>
-  bool getTranslations(const FilePath& elemDir, const QStringList& localeOrder,
-                       QString* name = nullptr, QString* description = nullptr,
-                       QString* keywords = nullptr) const {
+  bool getTranslations(const FilePath &elemDir, const QStringList &localeOrder,
+                       QString *name = nullptr, QString *description = nullptr,
+                       QString *keywords = nullptr) const {
     return getTranslations(getTable<ElementType>(), elemDir, localeOrder, name,
                            description, keywords);
   }
@@ -256,9 +256,9 @@ public:
    * @retval false If the element was not found.
    */
   template <typename ElementType>
-  bool getMetadata(const FilePath elemDir, Uuid* uuid = nullptr,
-                   Version* version = nullptr,
-                   bool* deprecated = nullptr) const {
+  bool getMetadata(const FilePath elemDir, Uuid *uuid = nullptr,
+                   Version *version = nullptr,
+                   bool *deprecated = nullptr) const {
     return getMetadata(getTable<ElementType>(), elemDir, uuid, version,
                        deprecated);
   }
@@ -276,8 +276,8 @@ public:
    * @retval true If the library was found in the database.
    * @retval false If the library was not found.
    */
-  bool getLibraryMetadata(const FilePath libDir, QPixmap* icon = nullptr,
-                          QString* manufacturer = nullptr) const;
+  bool getLibraryMetadata(const FilePath libDir, QPixmap *icon = nullptr,
+                          QString *manufacturer = nullptr) const;
 
   /**
    * @brief Get additional metadata of a specific category
@@ -293,7 +293,7 @@ public:
    */
   template <typename ElementType>
   bool getCategoryMetadata(const FilePath catDir,
-                           tl::optional<Uuid>* parent = nullptr) const {
+                           tl::optional<Uuid> *parent = nullptr) const {
     static_assert(std::is_same<ElementType, ComponentCategory>::value ||
                       std::is_same<ElementType, PackageCategory>::value,
                   "Unsupported ElementType");
@@ -312,8 +312,8 @@ public:
    * @retval true If the device was found in the database.
    * @retval false If the device was not found.
    */
-  bool getDeviceMetadata(const FilePath& devDir, Uuid* cmpUuid = nullptr,
-                         Uuid* pkgUuid = nullptr) const;
+  bool getDeviceMetadata(const FilePath &devDir, Uuid *cmpUuid = nullptr,
+                         Uuid *pkgUuid = nullptr) const;
 
   /**
    * @brief Get children categories of a specific category
@@ -329,7 +329,7 @@ public:
    *          doesn't exist.
    */
   template <typename ElementType>
-  QSet<Uuid> getChilds(const tl::optional<Uuid>& parent) const {
+  QSet<Uuid> getChilds(const tl::optional<Uuid> &parent) const {
     static_assert(std::is_same<ElementType, ComponentCategory>::value ||
                       std::is_same<ElementType, PackageCategory>::value,
                   "Unsupported ElementType");
@@ -354,7 +354,7 @@ public:
    * @return UUIDs of elements. Empty if the passed category doesn't exist.
    */
   template <typename ElementType>
-  QSet<Uuid> getByCategory(const tl::optional<Uuid>& category,
+  QSet<Uuid> getByCategory(const tl::optional<Uuid> &category,
                            int limit = -1) const {
     static_assert(std::is_same<ElementType, Symbol>::value ||
                       std::is_same<ElementType, Package>::value ||
@@ -372,7 +372,7 @@ public:
    *
    * @return UUIDs of devices. Empty if the passed component doesn't exist.
    */
-  QSet<Uuid> getComponentDevices(const Uuid& component) const;
+  QSet<Uuid> getComponentDevices(const Uuid &component) const;
 
   /**
    * @brief Get all parts of a specific device
@@ -381,7 +381,7 @@ public:
    *
    * @return All parts. Empty if the passed device doesn't exist.
    */
-  QList<Part> getDeviceParts(const Uuid& device) const;
+  QList<Part> getDeviceParts(const Uuid &device) const;
 
   // General Methods
 
@@ -391,7 +391,7 @@ public:
   void startLibraryRescan() noexcept;
 
   // Operator Overloadings
-  WorkspaceLibraryDb& operator=(const WorkspaceLibraryDb& rhs) = delete;
+  WorkspaceLibraryDb &operator=(const WorkspaceLibraryDb &rhs) = delete;
 
 signals:
   void scanStarted();
@@ -403,37 +403,36 @@ signals:
 
 private:
   // Private Methods
-  QMultiMap<Version, FilePath> getAll(const QString& elementsTable,
-                                      const tl::optional<Uuid>& uuid,
-                                      const FilePath& lib) const;
+  QMultiMap<Version, FilePath> getAll(const QString &elementsTable,
+                                      const tl::optional<Uuid> &uuid,
+                                      const FilePath &lib) const;
   FilePath getLatestVersionFilePath(
-      const QMultiMap<Version, FilePath>& list) const noexcept;
-  QList<Uuid> find(const QString& elementsTable, const QString& keyword) const;
-  bool getTranslations(const QString& elementsTable, const FilePath& elemDir,
-                       const QStringList& localeOrder, QString* name,
-                       QString* description, QString* keywords) const;
-  bool getMetadata(const QString& elementsTable, const FilePath elemDir,
-                   Uuid* uuid, Version* version, bool* deprecated) const;
-  bool getCategoryMetadata(const QString& categoriesTable,
+      const QMultiMap<Version, FilePath> &list) const noexcept;
+  QList<Uuid> find(const QString &elementsTable, const QString &keyword) const;
+
+  bool getTranslations(const QString &elementsTable, const FilePath &elemDir,
+                       const QStringList &localeOrder, QString *name,
+                       QString *description, QString *keywords) const;
+  bool getMetadata(const QString &elementsTable, const FilePath elemDir,
+                   Uuid *uuid, Version *version, bool *deprecated) const;
+  bool getCategoryMetadata(const QString &categoriesTable,
                            const FilePath catDir,
-                           tl::optional<Uuid>* parent) const;
+                           tl::optional<Uuid> *parent) const;
   AttributeList getPartAttributes(int partId) const;
-  QSet<Uuid> getChilds(const QString& categoriesTable,
-                       const tl::optional<Uuid>& categoryUuid) const;
-  QSet<Uuid> getByCategory(const QString& elementsTable,
-                           const QString& categoryTable,
-                           const tl::optional<Uuid>& category, int limit) const;
-  static QSet<Uuid> getUuidSet(QSqlQuery& query);
+  QSet<Uuid> getChilds(const QString &categoriesTable,
+                       const tl::optional<Uuid> &categoryUuid) const;
+  QSet<Uuid> getByCategory(const QString &elementsTable,
+                           const QString &categoryTable,
+                           const tl::optional<Uuid> &category, int limit) const;
+  static QSet<Uuid> getUuidSet(QSqlQuery &query);
   int getDbVersion() const noexcept;
-  template <typename ElementType>
-  static QString getTable() noexcept;
-  template <typename ElementType>
-  static QString getCategoryTable() noexcept;
+  template <typename ElementType> static QString getTable() noexcept;
+  template <typename ElementType> static QString getCategoryTable() noexcept;
 
   // Attributes
-  const FilePath mLibrariesPath;  ///< Path to workspace libraries directory.
-  const FilePath mFilePath;  ///< Path to the SQLite database file.
-  QScopedPointer<SQLiteDatabase> mDb;  ///< The SQLite database.
+  const FilePath mLibrariesPath; ///< Path to workspace libraries directory.
+  const FilePath mFilePath;      ///< Path to the SQLite database file.
+  QScopedPointer<SQLiteDatabase> mDb; ///< The SQLite database.
   QScopedPointer<WorkspaceLibraryScanner> mLibraryScanner;
 
   // Constants
@@ -444,6 +443,6 @@ private:
  *  End of File
  ******************************************************************************/
 
-}  // namespace librepcb
+} // namespace librepcb
 
 #endif

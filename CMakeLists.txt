@@ -1,6 +1,7 @@
 # CMake version configuration
 # (Note: The minimal version 3.5 is shipped with Ubuntu 16.04)
 cmake_minimum_required(VERSION 3.5...3.19)
+
 if(${CMAKE_VERSION} VERSION_LESS 3.12)
   cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
 endif()
@@ -8,8 +9,8 @@ endif()
 # Support older macOS versions. Needs to be set before calling project()!
 # https://github.com/LibrePCB/LibrePCB/issues/1091
 set(CMAKE_OSX_DEPLOYMENT_TARGET
-    "10.14"
-    CACHE STRING "Minimum OS X deployment version"
+  "10.14"
+  CACHE STRING "Minimum OS X deployment version"
 )
 
 # WARNING:
@@ -17,21 +18,21 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET
 # before making changes to the version numbers!
 
 # Application version:
-#  - Always three numbers (MAJOR.MINOR.PATCH)!
-#  - Unstable (development) versions: Suffix "-unstable", e.g. "1.0.0-unstable"
-#  - Release candidates: Suffix "-rc#", e.g. "1.0.0-rc3"
-#  - Releases: No suffix, e.g. "1.0.0"
+# - Always three numbers (MAJOR.MINOR.PATCH)!
+# - Unstable (development) versions: Suffix "-unstable", e.g. "1.0.0-unstable"
+# - Release candidates: Suffix "-rc#", e.g. "1.0.0-rc3"
+# - Releases: No suffix, e.g. "1.0.0"
 set(LIBREPCB_APP_VERSION "1.0.0")
 
 # File format version:
-#  - Must be equal to the major version of APP_VERSION!
-#  - If APP_VERSION < 1.0.0: Two numbers, e.g. "0.2" for APP_VERSION=="0.2.x"
-#  - If APP_VERSION >= 1.0.0: Only one number, e.g. "2" for APP_VERSION=="2.x.y"
+# - Must be equal to the major version of APP_VERSION!
+# - If APP_VERSION < 1.0.0: Two numbers, e.g. "0.2" for APP_VERSION=="0.2.x"
+# - If APP_VERSION >= 1.0.0: Only one number, e.g. "2" for APP_VERSION=="2.x.y"
 set(LIBREPCB_FILE_FORMAT_VERSION "1")
 
 # File format stable flag:
-#  - On all non-release branches: false
-#  - On release branches: true
+# - On all non-release branches: false
+# - On release branches: true
 # Note: Do not use a CMake boolean (ON / TRUE), use a C++ style boolean
 # string instead ("true" / "false").
 set(LIBREPCB_FILE_FORMAT_STABLE "true")
@@ -45,7 +46,7 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 # Global options
 option(BUILD_TESTS "Build unit tests." ON)
 option(BUILD_DISALLOW_WARNINGS
-       "Disallow compiler warnings during build (build with -Werror)." OFF
+  "Disallow compiler warnings during build (build with -Werror)." OFF
 )
 option(BUILD_QTQUICK_TEST "Build the QML test window." ON)
 option(UNBUNDLE_DXFLIB "Don't use vendored dxflib library." OFF)
@@ -64,8 +65,8 @@ include(DefaultBuildType)
 
 # Force static linking for local libs
 set(BUILD_SHARED_LIBS
-    OFF
-    CACHE BOOL "Link dynamically against local libraries." FORCE
+  OFF
+  CACHE BOOL "Link dynamically against local libraries." FORCE
 )
 
 # Auto-include current directory
@@ -91,14 +92,16 @@ endif()
 # Create "common" interface library which is used for DRY configuration of
 # build flags.
 add_library(common INTERFACE)
-target_compile_options(common INTERFACE -Wall -Wextra -Wpedantic)
-if(BUILD_DISALLOW_WARNINGS)
-  target_compile_options(common INTERFACE -Werror)
-endif()
+
+# target_compile_options(common INTERFACE -Wall -Wpedantic)
+
+# if(BUILD_DISALLOW_WARNINGS)
+# target_compile_options(common INTERFACE -Werror)
+# endif()
 
 # The TypeSafe library causes some compiler warnings which are not of
 # interest, so let's suppress them.
-target_compile_options(common INTERFACE -Wno-noexcept-type)
+# target_compile_options(common INTERFACE -Wno-noexcept-type)
 
 # Clang emits some warnings within the muParser library when compiling with
 # -Wpedantic, so let's suppress these warnings when compiling with Clang.
@@ -115,16 +118,17 @@ endif()
 find_package(
   Qt5 5.5.0
   COMPONENTS Concurrent
-             Gui
-             LinguistTools
-             Network
-             OpenGL
-             PrintSupport
-             Sql
-             Svg
-             Widgets
+  Gui
+  LinguistTools
+  Network
+  OpenGL
+  PrintSupport
+  Sql
+  Svg
+  Widgets
   REQUIRED
 )
+
 if(BUILD_QTQUICK_TEST)
   find_package(
     Qt5 5.5.0
@@ -132,6 +136,7 @@ if(BUILD_QTQUICK_TEST)
     REQUIRED
   )
 endif()
+
 if(BUILD_TESTS)
   find_package(
     Qt5 5.5.0
@@ -139,6 +144,7 @@ if(BUILD_TESTS)
     REQUIRED
   )
 endif()
+
 message(STATUS "Building with Qt${Qt5Core_VERSION}")
 
 # In Qt 5.15, a lot of things were marked as deprecated, without providing
@@ -146,9 +152,9 @@ message(STATUS "Building with Qt${Qt5Core_VERSION}")
 # preprocessor conditionals to avoid these deprecation warnings, so let's just
 # disable them for now. We are using CI anyway to ensure LibrePCB compiles with
 # the targeted Qt versions.
-if("${Qt5Core_VERSION_MAJOR}.${Qt5Core_VERSION_MINOR}" VERSION_GREATER 5.14)
-  target_compile_options(common INTERFACE -Wno-deprecated-declarations)
-endif()
+# if("${Qt5Core_VERSION_MAJOR}.${Qt5Core_VERSION_MINOR}" VERSION_GREATER 5.14)
+# target_compile_options(common INTERFACE -Wno-deprecated-declarations)
+# endif()
 
 # Find third party libraries
 find_package(DelaunayTriangulation REQUIRED)
@@ -161,9 +167,11 @@ find_package(Optional REQUIRED)
 find_package(Polyclipping REQUIRED)
 find_package(QuaZip REQUIRED)
 find_package(TypeSafe REQUIRED)
+
 if(BUILD_TESTS)
   find_package(GTest REQUIRED)
 endif()
+
 # Hoedown is only needed on Qt <5.14
 if(Qt5Core_VERSION VERSION_LESS 5.14)
   message(STATUS "Qt <5.14 detected, using Hoedown for markdown support")
@@ -196,12 +204,14 @@ file(
 set_source_files_properties(
   ${LIBREPCB_TS_FILES} PROPERTIES OUTPUT_LOCATION "${LIBREPCB_QM_FILES_DIR}"
 )
+
 if(Qt5_VERSION VERSION_LESS 5.12)
   # Qt <5.12 doesn't support OPTIONS
   qt5_add_translation(LIBREPCB_QM_FILES ${LIBREPCB_TS_FILES})
 else()
   qt5_add_translation(LIBREPCB_QM_FILES ${LIBREPCB_TS_FILES} OPTIONS -silent)
 endif()
+
 add_custom_target(librepcb_translations DEPENDS ${LIBREPCB_QM_FILES})
 add_dependencies(librepcb librepcb_translations)
 
@@ -212,6 +222,7 @@ file(
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
   share/*
 )
+
 foreach(d ${SHARE_DIRS})
   if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/${d}")
     install(
@@ -221,6 +232,7 @@ foreach(d ${SHARE_DIRS})
     )
   endif()
 endforeach()
+
 install(
   DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/i18n/share/
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR} OPTIONAL

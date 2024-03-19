@@ -49,17 +49,14 @@ namespace editor {
  ******************************************************************************/
 
 PackageChooserDialog::PackageChooserDialog(
-    const Workspace& ws, const IF_GraphicsLayerProvider* layerProvider,
-    QWidget* parent) noexcept
-  : QDialog(parent),
-    mWorkspace(ws),
-    mLayerProvider(layerProvider),
-    mUi(new Ui::PackageChooserDialog),
-    mCategorySelected(false) {
+    const Workspace &ws, const IF_GraphicsLayerProvider *layerProvider,
+    QWidget *parent) noexcept
+    : QDialog(parent), mWorkspace(ws), mLayerProvider(layerProvider),
+      mUi(new Ui::PackageChooserDialog), mCategorySelected(false) {
   mUi->setupUi(this);
 
   mGraphicsScene.reset(new GraphicsScene());
-  const Theme& theme = mWorkspace.getSettings().themes.getActive();
+  const Theme &theme = mWorkspace.getSettings().themes.getActive();
   mUi->graphicsView->setBackgroundColors(
       theme.getColor(Theme::Color::sBoardBackground).getPrimaryColor(),
       theme.getColor(Theme::Color::sBoardBackground).getSecondaryColor());
@@ -80,8 +77,8 @@ PackageChooserDialog::PackageChooserDialog(
           &PackageChooserDialog::searchEditTextChanged);
 
   // Add waiting spinner during workspace library scan.
-  auto addSpinner = [&ws](QWidget* widget) {
-    WaitingSpinnerWidget* spinner = new WaitingSpinnerWidget(widget);
+  auto addSpinner = [&ws](QWidget *widget) {
+    WaitingSpinnerWidget *spinner = new WaitingSpinnerWidget(widget);
     connect(&ws.getLibraryDb(), &WorkspaceLibraryDb::scanStarted, spinner,
             &WaitingSpinnerWidget::show);
     connect(&ws.getLibraryDb(), &WorkspaceLibraryDb::scanFinished, spinner,
@@ -102,7 +99,7 @@ PackageChooserDialog::~PackageChooserDialog() noexcept {
  *  Private Methods
  ******************************************************************************/
 
-void PackageChooserDialog::searchEditTextChanged(const QString& text) noexcept {
+void PackageChooserDialog::searchEditTextChanged(const QString &text) noexcept {
   try {
     QModelIndex catIndex = mUi->treeCategories->currentIndex();
     if (text.trimmed().isEmpty() && catIndex.isValid()) {
@@ -111,20 +108,20 @@ void PackageChooserDialog::searchEditTextChanged(const QString& text) noexcept {
     } else {
       searchPackages(text.trimmed());
     }
-  } catch (const Exception& e) {
+  } catch (const Exception &e) {
     QMessageBox::critical(this, tr("Error"), e.getMsg());
   }
 }
 
 void PackageChooserDialog::treeCategories_currentItemChanged(
-    const QModelIndex& current, const QModelIndex& previous) noexcept {
+    const QModelIndex &current, const QModelIndex &previous) noexcept {
   Q_UNUSED(previous);
   setSelectedCategory(
       Uuid::tryFromString(current.data(Qt::UserRole).toString()));
 }
 
 void PackageChooserDialog::listPackages_currentItemChanged(
-    QListWidgetItem* current, QListWidgetItem* previous) noexcept {
+    QListWidgetItem *current, QListWidgetItem *previous) noexcept {
   Q_UNUSED(previous);
   if (current) {
     setSelectedPackage(
@@ -135,7 +132,7 @@ void PackageChooserDialog::listPackages_currentItemChanged(
 }
 
 void PackageChooserDialog::listPackages_itemDoubleClicked(
-    QListWidgetItem* item) noexcept {
+    QListWidgetItem *item) noexcept {
   if (item) {
     setSelectedPackage(
         Uuid::tryFromString(item->data(Qt::UserRole).toString()));
@@ -143,24 +140,24 @@ void PackageChooserDialog::listPackages_itemDoubleClicked(
   }
 }
 
-void PackageChooserDialog::searchPackages(const QString& input) {
+void PackageChooserDialog::searchPackages(const QString &input) {
   setSelectedPackage(tl::nullopt);
   mUi->listPackages->clear();
   mCategorySelected = false;
 
   // min. 2 chars to avoid freeze on entering first character due to huge result
   if (input.length() > 1) {
-    QList<Uuid> packages = mWorkspace.getLibraryDb().find<Package>(input);
-    foreach (const Uuid& uuid, packages) {
+    QList<Uuid> packages = mWorkspace.getLibraryDb().find_pkg(input);
+    foreach (const Uuid &uuid, packages) {
       FilePath fp =
-          mWorkspace.getLibraryDb().getLatest<Package>(uuid);  // can throw
+          mWorkspace.getLibraryDb().getLatest<Package>(uuid); // can throw
       QString name;
       mWorkspace.getLibraryDb().getTranslations<Package>(fp, localeOrder(),
-                                                         &name);  // can throw
+                                                         &name); // can throw
       bool deprecated = false;
       mWorkspace.getLibraryDb().getMetadata<Package>(fp, nullptr, nullptr,
-                                                     &deprecated);  // can throw
-      QListWidgetItem* item = new QListWidgetItem(name);
+                                                     &deprecated); // can throw
+      QListWidgetItem *item = new QListWidgetItem(name);
       item->setForeground(deprecated ? QBrush(Qt::red) : QBrush());
       item->setData(Qt::UserRole, uuid.toStr());
       mUi->listPackages->addItem(item);
@@ -169,8 +166,9 @@ void PackageChooserDialog::searchPackages(const QString& input) {
 }
 
 void PackageChooserDialog::setSelectedCategory(
-    const tl::optional<Uuid>& uuid) noexcept {
-  if ((mCategorySelected) && (uuid == mSelectedCategoryUuid)) return;
+    const tl::optional<Uuid> &uuid) noexcept {
+  if ((mCategorySelected) && (uuid == mSelectedCategoryUuid))
+    return;
 
   setSelectedPackage(tl::nullopt);
   mUi->listPackages->clear();
@@ -179,32 +177,32 @@ void PackageChooserDialog::setSelectedCategory(
 
   try {
     QSet<Uuid> packages =
-        mWorkspace.getLibraryDb().getByCategory<Package>(uuid);  // can throw
-    foreach (const Uuid& pkgUuid, packages) {
+        mWorkspace.getLibraryDb().getByCategory<Package>(uuid); // can throw
+    foreach (const Uuid &pkgUuid, packages) {
       try {
         FilePath fp =
-            mWorkspace.getLibraryDb().getLatest<Package>(pkgUuid);  // can throw
+            mWorkspace.getLibraryDb().getLatest<Package>(pkgUuid); // can throw
         QString name;
         mWorkspace.getLibraryDb().getTranslations<Package>(fp, localeOrder(),
-                                                           &name);  // can throw
+                                                           &name); // can throw
         bool deprecated = false;
         mWorkspace.getLibraryDb().getMetadata<Package>(
-            fp, nullptr, nullptr, &deprecated);  // can throw
-        QListWidgetItem* item = new QListWidgetItem(name);
+            fp, nullptr, nullptr, &deprecated); // can throw
+        QListWidgetItem *item = new QListWidgetItem(name);
         item->setForeground(deprecated ? QBrush(Qt::red) : QBrush());
         item->setData(Qt::UserRole, pkgUuid.toStr());
         mUi->listPackages->addItem(item);
-      } catch (const Exception& e) {
-        continue;  // should we do something here?
+      } catch (const Exception &e) {
+        continue; // should we do something here?
       }
     }
-  } catch (const Exception& e) {
+  } catch (const Exception &e) {
     QMessageBox::critical(this, tr("Could not load packages"), e.getMsg());
   }
 }
 
 void PackageChooserDialog::setSelectedPackage(
-    const tl::optional<Uuid>& uuid) noexcept {
+    const tl::optional<Uuid> &uuid) noexcept {
   FilePath fp;
   QString name = tr("No package selected");
   QString desc;
@@ -212,10 +210,10 @@ void PackageChooserDialog::setSelectedPackage(
 
   if (uuid) {
     try {
-      fp = mWorkspace.getLibraryDb().getLatest<Package>(*uuid);  // can throw
+      fp = mWorkspace.getLibraryDb().getLatest<Package>(*uuid); // can throw
       mWorkspace.getLibraryDb().getTranslations<Package>(
-          fp, localeOrder(), &name, &desc);  // can throw
-    } catch (const Exception& e) {
+          fp, localeOrder(), &name, &desc); // can throw
+    } catch (const Exception &e) {
       QMessageBox::critical(this, tr("Could not load package metadata"),
                             e.getMsg());
     }
@@ -226,7 +224,7 @@ void PackageChooserDialog::setSelectedPackage(
   updatePreview(fp);
 }
 
-void PackageChooserDialog::updatePreview(const FilePath& fp) noexcept {
+void PackageChooserDialog::updatePreview(const FilePath &fp) noexcept {
   mGraphicsItem.reset();
   mPackage.reset();
 
@@ -234,7 +232,7 @@ void PackageChooserDialog::updatePreview(const FilePath& fp) noexcept {
     try {
       mPackage = Package::open(
           std::unique_ptr<TransactionalDirectory>(new TransactionalDirectory(
-              TransactionalFileSystem::openRO(fp))));  // can throw
+              TransactionalFileSystem::openRO(fp)))); // can throw
       if (mPackage->getFootprints().count() > 0) {
         mGraphicsItem.reset(new FootprintGraphicsItem(
             mPackage->getFootprints().first(), *mLayerProvider,
@@ -243,7 +241,7 @@ void PackageChooserDialog::updatePreview(const FilePath& fp) noexcept {
         mGraphicsScene->addItem(*mGraphicsItem);
         mUi->graphicsView->zoomAll();
       }
-    } catch (const Exception& e) {
+    } catch (const Exception &e) {
       // ignore errors...
     }
   }
@@ -258,7 +256,7 @@ void PackageChooserDialog::accept() noexcept {
   QDialog::accept();
 }
 
-const QStringList& PackageChooserDialog::localeOrder() const noexcept {
+const QStringList &PackageChooserDialog::localeOrder() const noexcept {
   return mWorkspace.getSettings().libraryLocaleOrder.get();
 }
 
@@ -266,5 +264,5 @@ const QStringList& PackageChooserDialog::localeOrder() const noexcept {
  *  End of File
  ******************************************************************************/
 
-}  // namespace editor
-}  // namespace librepcb
+} // namespace editor
+} // namespace librepcb

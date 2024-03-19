@@ -47,7 +47,7 @@
  ******************************************************************************/
 namespace librepcb {
 
-static inline uint qHash(const WorkspaceLibraryDb::Part& key,
+static inline uint qHash(const WorkspaceLibraryDb::Part &key,
                          uint seed) noexcept {
   return ::qHash(qMakePair(key.mpn, key.manufacturer), seed);
 }
@@ -56,15 +56,14 @@ static inline uint qHash(const WorkspaceLibraryDb::Part& key,
  *  Constructors / Destructor
  ******************************************************************************/
 
-WorkspaceLibraryDb::WorkspaceLibraryDb(const FilePath& librariesPath)
-  : QObject(nullptr),
-    mLibrariesPath(librariesPath),
-    mFilePath(mLibrariesPath.getPathTo(
-        QString("cache_v%1.sqlite").arg(sCurrentDbVersion))) {
+WorkspaceLibraryDb::WorkspaceLibraryDb(const FilePath &librariesPath)
+    : QObject(nullptr), mLibrariesPath(librariesPath),
+      mFilePath(mLibrariesPath.getPathTo(
+          QString("cache_v%1.sqlite").arg(sCurrentDbVersion))) {
   qDebug("Load workspace library database...");
 
   // open SQLite database
-  mDb.reset(new SQLiteDatabase(mFilePath));  // can throw
+  mDb.reset(new SQLiteDatabase(mFilePath)); // can throw
 
   // Check database version - actually it must match the version in the
   // filename, but if not (e.g. due to a mistake by us) we just remove the whole
@@ -75,10 +74,10 @@ WorkspaceLibraryDb::WorkspaceLibraryDb(const FilePath& librariesPath)
                << "is outdated or not supported, reinitializing...";
     mDb.reset();
     QFile(mFilePath.toStr()).remove();
-    mDb.reset(new SQLiteDatabase(mFilePath));  // can throw
+    mDb.reset(new SQLiteDatabase(mFilePath)); // can throw
     WorkspaceLibraryDbWriter writer(mLibrariesPath, *mDb);
-    writer.createAllTables();  // can throw
-    writer.addInternalData("version", sCurrentDbVersion);  // can throw
+    writer.createAllTables();                             // can throw
+    writer.addInternalData("version", sCurrentDbVersion); // can throw
   }
 
   // create library scanner object
@@ -100,8 +99,7 @@ WorkspaceLibraryDb::WorkspaceLibraryDb(const FilePath& librariesPath)
   qDebug("Successfully loaded workspace library database.");
 }
 
-WorkspaceLibraryDb::~WorkspaceLibraryDb() noexcept {
-}
+WorkspaceLibraryDb::~WorkspaceLibraryDb() noexcept {}
 
 /*******************************************************************************
  *  Getters
@@ -111,57 +109,56 @@ int WorkspaceLibraryDb::getScanProgressPercent() const noexcept {
   return mLibraryScanner->getProgressPercent();
 }
 
-template <>
-QList<Uuid> WorkspaceLibraryDb::find<Package>(const QString& keyword) const {
+QList<Uuid> WorkspaceLibraryDb::find_pkg(const QString &keyword) const {
   // ATTENTION: Keep SQL in sync with the generig find() method below!
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT packages.uuid FROM packages "
-      "LEFT JOIN packages_tr "
-      "ON packages.id = packages_tr.element_id "
-      "LEFT JOIN packages_alt "
-      "ON packages.id = packages_alt.package_id "
-      "WHERE packages_tr.name LIKE :escapedKeyword "
-      "OR packages_tr.keywords LIKE :escapedKeyword "
-      "OR packages_alt.name LIKE :escapedKeyword "
-      "OR packages.uuid = :keyword "
-      "GROUP BY packages.uuid "
-      "ORDER BY packages_tr.name ASC");
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT packages.uuid FROM packages "
+                        "LEFT JOIN packages_tr "
+                        "ON packages.id = packages_tr.element_id "
+                        "LEFT JOIN packages_alt "
+                        "ON packages.id = packages_alt.package_id "
+                        "WHERE packages_tr.name LIKE :escapedKeyword "
+                        "OR packages_tr.keywords LIKE :escapedKeyword "
+                        "OR packages_alt.name LIKE :escapedKeyword "
+                        "OR packages.uuid = :keyword "
+                        "GROUP BY packages.uuid "
+                        "ORDER BY packages_tr.name ASC");
   query.bindValue(":keyword", keyword);
   query.bindValue(":escapedKeyword", "%" + keyword + "%");
   mDb->exec(query);
 
   QList<Uuid> uuids;
   while (query.next()) {
-    uuids.append(Uuid::fromString(query.value(0).toString()));  // can throw
+    uuids.append(Uuid::fromString(query.value(0).toString())); // can throw
   }
   return uuids;
 }
 
-QList<Uuid> WorkspaceLibraryDb::findDevicesOfParts(
-    const QString& keyword) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT devices.uuid FROM devices "
-      "LEFT JOIN parts "
-      "ON devices.id = parts.device_id "
-      "LEFT JOIN devices_tr "
-      "ON devices.id = devices_tr.element_id "
-      "WHERE parts.manufacturer LIKE :keyword "
-      "OR parts.mpn LIKE :keyword "
-      "GROUP BY devices.uuid "
-      "ORDER BY devices_tr.name ASC");
+QList<Uuid>
+WorkspaceLibraryDb::findDevicesOfParts(const QString &keyword) const {
+  QSqlQuery query = mDb->prepareQuery("SELECT devices.uuid FROM devices "
+                                      "LEFT JOIN parts "
+                                      "ON devices.id = parts.device_id "
+                                      "LEFT JOIN devices_tr "
+                                      "ON devices.id = devices_tr.element_id "
+                                      "WHERE parts.manufacturer LIKE :keyword "
+                                      "OR parts.mpn LIKE :keyword "
+                                      "GROUP BY devices.uuid "
+                                      "ORDER BY devices_tr.name ASC");
   query.bindValue(":keyword", "%" + keyword + "%");
   mDb->exec(query);
 
   QList<Uuid> uuids;
   while (query.next()) {
-    uuids.append(Uuid::fromString(query.value(0).toString()));  // can throw
+    uuids.append(Uuid::fromString(query.value(0).toString())); // can throw
   }
   return uuids;
 }
 
-QList<WorkspaceLibraryDb::Part> WorkspaceLibraryDb::findPartsOfDevice(
-    const Uuid& device, const QString& keyword) const {
-  SQLiteDatabase::TransactionScopeGuard sg(*mDb);  // Atomic attributes query!
+QList<WorkspaceLibraryDb::Part>
+WorkspaceLibraryDb::findPartsOfDevice(const Uuid &device,
+                                      const QString &keyword) const {
+  SQLiteDatabase::TransactionScopeGuard sg(*mDb); // Atomic attributes query!
 
   QSqlQuery query = mDb->prepareQuery(
       "SELECT parts.id, mpn, manufacturer FROM parts "
@@ -182,12 +179,12 @@ QList<WorkspaceLibraryDb::Part> WorkspaceLibraryDb::findPartsOfDevice(
 }
 
 bool WorkspaceLibraryDb::getLibraryMetadata(const FilePath libDir,
-                                            QPixmap* icon,
-                                            QString* manufacturer) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT icon_png, manufacturer FROM libraries "
-      "WHERE filepath = :filepath "
-      "LIMIT 1");
+                                            QPixmap *icon,
+                                            QString *manufacturer) const {
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT icon_png, manufacturer FROM libraries "
+                        "WHERE filepath = :filepath "
+                        "LIMIT 1");
   query.bindValue(":filepath", libDir.toRelative(mLibrariesPath));
   mDb->exec(query);
 
@@ -205,12 +202,12 @@ bool WorkspaceLibraryDb::getLibraryMetadata(const FilePath libDir,
   return true;
 }
 
-bool WorkspaceLibraryDb::getDeviceMetadata(const FilePath& devDir,
-                                           Uuid* cmpUuid, Uuid* pkgUuid) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT component_uuid, package_uuid FROM devices "
-      "WHERE filepath = :filepath "
-      "LIMIT 1");
+bool WorkspaceLibraryDb::getDeviceMetadata(const FilePath &devDir,
+                                           Uuid *cmpUuid, Uuid *pkgUuid) const {
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT component_uuid, package_uuid FROM devices "
+                        "WHERE filepath = :filepath "
+                        "LIMIT 1");
   query.bindValue(":filepath", devDir.toRelative(mLibrariesPath));
   mDb->exec(query);
 
@@ -220,10 +217,10 @@ bool WorkspaceLibraryDb::getDeviceMetadata(const FilePath& devDir,
   }
 
   if (cmpUuid) {
-    *cmpUuid = Uuid::fromString(query.value(0).toString());  // can throw
+    *cmpUuid = Uuid::fromString(query.value(0).toString()); // can throw
   }
   if (pkgUuid) {
-    *pkgUuid = Uuid::fromString(query.value(1).toString());  // can throw
+    *pkgUuid = Uuid::fromString(query.value(1).toString()); // can throw
   }
   return true;
 }
@@ -232,25 +229,24 @@ bool WorkspaceLibraryDb::getDeviceMetadata(const FilePath& devDir,
  *  Getters: Special
  ******************************************************************************/
 
-QSet<Uuid> WorkspaceLibraryDb::getComponentDevices(
-    const Uuid& component) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT uuid FROM devices "
-      "WHERE component_uuid = :uuid "
-      "GROUP BY uuid");
+QSet<Uuid>
+WorkspaceLibraryDb::getComponentDevices(const Uuid &component) const {
+  QSqlQuery query = mDb->prepareQuery("SELECT uuid FROM devices "
+                                      "WHERE component_uuid = :uuid "
+                                      "GROUP BY uuid");
   query.bindValue(":uuid", component.toStr());
   mDb->exec(query);
   return getUuidSet(query);
 }
 
-QList<WorkspaceLibraryDb::Part> WorkspaceLibraryDb::getDeviceParts(
-    const Uuid& device) const {
-  SQLiteDatabase::TransactionScopeGuard sg(*mDb);  // Atomic attributes query!
+QList<WorkspaceLibraryDb::Part>
+WorkspaceLibraryDb::getDeviceParts(const Uuid &device) const {
+  SQLiteDatabase::TransactionScopeGuard sg(*mDb); // Atomic attributes query!
 
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT parts.id, mpn, manufacturer FROM parts "
-      "LEFT JOIN devices ON devices.id = parts.device_id "
-      "WHERE devices.uuid = :device");
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT parts.id, mpn, manufacturer FROM parts "
+                        "LEFT JOIN devices ON devices.id = parts.device_id "
+                        "WHERE devices.uuid = :device");
   query.bindValue(":device", device.toStr());
   mDb->exec(query);
 
@@ -274,9 +270,10 @@ void WorkspaceLibraryDb::startLibraryRescan() noexcept {
  *  Private Methods
  ******************************************************************************/
 
-QMultiMap<Version, FilePath> WorkspaceLibraryDb::getAll(
-    const QString& elementsTable, const tl::optional<Uuid>& uuid,
-    const FilePath& lib) const {
+QMultiMap<Version, FilePath>
+WorkspaceLibraryDb::getAll(const QString &elementsTable,
+                           const tl::optional<Uuid> &uuid,
+                           const FilePath &lib) const {
   if (lib.isValid() && (elementsTable == "libraries")) {
     throw LogicError(__FILE__, __LINE__,
                      "Filtering for libraries makes no sense and doesn't work "
@@ -311,7 +308,7 @@ QMultiMap<Version, FilePath> WorkspaceLibraryDb::getAll(
   QMultiMap<Version, FilePath> elements;
   while (query.next()) {
     Version version =
-        Version::fromString(query.value(0).toString());  // can throw
+        Version::fromString(query.value(0).toString()); // can throw
     FilePath filepath(
         FilePath::fromRelative(mLibrariesPath, query.value(1).toString()));
     if (filepath.isValid()) {
@@ -324,44 +321,44 @@ QMultiMap<Version, FilePath> WorkspaceLibraryDb::getAll(
 }
 
 FilePath WorkspaceLibraryDb::getLatestVersionFilePath(
-    const QMultiMap<Version, FilePath>& list) const noexcept {
+    const QMultiMap<Version, FilePath> &list) const noexcept {
   if (list.isEmpty())
     return FilePath();
   else
-    return list.last();  // highest version number
+    return list.last(); // highest version number
 }
 
-QList<Uuid> WorkspaceLibraryDb::find(const QString& elementsTable,
-                                     const QString& keyword) const {
+QList<Uuid> WorkspaceLibraryDb::find(const QString &elementsTable,
+                                     const QString &keyword) const {
   // ATTENTION: Keep SQL in sync with the find<Package>() method above!
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT %elements.uuid FROM %elements "
-      "LEFT JOIN %elements_tr "
-      "ON %elements.id = %elements_tr.element_id "
-      "WHERE %elements_tr.name LIKE :escapedKeyword "
-      "OR %elements_tr.keywords LIKE :escapedKeyword "
-      "OR %elements.uuid = :keyword "
-      "GROUP BY %elements.uuid "
-      "ORDER BY %elements_tr.name ASC",
-      {
-          {"%elements", elementsTable},
-      });
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT %elements.uuid FROM %elements "
+                        "LEFT JOIN %elements_tr "
+                        "ON %elements.id = %elements_tr.element_id "
+                        "WHERE %elements_tr.name LIKE :escapedKeyword "
+                        "OR %elements_tr.keywords LIKE :escapedKeyword "
+                        "OR %elements.uuid = :keyword "
+                        "GROUP BY %elements.uuid "
+                        "ORDER BY %elements_tr.name ASC",
+                        {
+                            {"%elements", elementsTable},
+                        });
   query.bindValue(":keyword", keyword);
   query.bindValue(":escapedKeyword", "%" + keyword + "%");
   mDb->exec(query);
 
   QList<Uuid> uuids;
   while (query.next()) {
-    uuids.append(Uuid::fromString(query.value(0).toString()));  // can throw
+    uuids.append(Uuid::fromString(query.value(0).toString())); // can throw
   }
   return uuids;
 }
 
-bool WorkspaceLibraryDb::getTranslations(const QString& elementsTable,
-                                         const FilePath& elemDir,
-                                         const QStringList& localeOrder,
-                                         QString* name, QString* description,
-                                         QString* keywords) const {
+bool WorkspaceLibraryDb::getTranslations(const QString &elementsTable,
+                                         const FilePath &elemDir,
+                                         const QStringList &localeOrder,
+                                         QString *name, QString *description,
+                                         QString *keywords) const {
   QSqlQuery query = mDb->prepareQuery(
       "SELECT locale, name, description, keywords FROM %elements_tr "
       "INNER JOIN %elements "
@@ -385,27 +382,33 @@ bool WorkspaceLibraryDb::getTranslations(const QString& elementsTable,
     QString name = query.value(1).toString();
     QString description = query.value(2).toString();
     QString keywords = query.value(3).toString();
-    if (!name.isNull()) nameMap.insert(locale, name);
-    if (!description.isNull()) descriptionMap.insert(locale, description);
-    if (!keywords.isNull()) keywordsMap.insert(locale, keywords);
+    if (!name.isNull())
+      nameMap.insert(locale, name);
+    if (!description.isNull())
+      descriptionMap.insert(locale, description);
+    if (!keywords.isNull())
+      keywordsMap.insert(locale, keywords);
   }
 
-  if (name) *name = nameMap.value(localeOrder);
-  if (description) *description = descriptionMap.value(localeOrder);
-  if (keywords) *keywords = keywordsMap.value(localeOrder);
+  if (name)
+    *name = nameMap.value(localeOrder);
+  if (description)
+    *description = descriptionMap.value(localeOrder);
+  if (keywords)
+    *keywords = keywordsMap.value(localeOrder);
   return elementFound;
 }
 
-bool WorkspaceLibraryDb::getMetadata(const QString& elementsTable,
-                                     const FilePath elemDir, Uuid* uuid,
-                                     Version* version, bool* deprecated) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT uuid, version, deprecated FROM %elements "
-      "WHERE filepath = :filepath "
-      "LIMIT 1",
-      {
-          {"%elements", elementsTable},
-      });
+bool WorkspaceLibraryDb::getMetadata(const QString &elementsTable,
+                                     const FilePath elemDir, Uuid *uuid,
+                                     Version *version, bool *deprecated) const {
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT uuid, version, deprecated FROM %elements "
+                        "WHERE filepath = :filepath "
+                        "LIMIT 1",
+                        {
+                            {"%elements", elementsTable},
+                        });
   query.bindValue(":filepath", elemDir.toRelative(mLibrariesPath));
   mDb->exec(query);
 
@@ -415,10 +418,10 @@ bool WorkspaceLibraryDb::getMetadata(const QString& elementsTable,
   }
 
   if (uuid) {
-    *uuid = Uuid::fromString(query.value(0).toString());  // can throw
+    *uuid = Uuid::fromString(query.value(0).toString()); // can throw
   }
   if (version) {
-    *version = Version::fromString(query.value(1).toString());  // can throw
+    *version = Version::fromString(query.value(1).toString()); // can throw
   }
   if (deprecated) {
     *deprecated = query.value(2).toBool();
@@ -426,16 +429,15 @@ bool WorkspaceLibraryDb::getMetadata(const QString& elementsTable,
   return true;
 }
 
-bool WorkspaceLibraryDb::getCategoryMetadata(const QString& categoriesTable,
+bool WorkspaceLibraryDb::getCategoryMetadata(const QString &categoriesTable,
                                              const FilePath catDir,
-                                             tl::optional<Uuid>* parent) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT parent_uuid FROM %categories "
-      "WHERE filepath = :filepath "
-      "LIMIT 1",
-      {
-          {"%categories", categoriesTable},
-      });
+                                             tl::optional<Uuid> *parent) const {
+  QSqlQuery query = mDb->prepareQuery("SELECT parent_uuid FROM %categories "
+                                      "WHERE filepath = :filepath "
+                                      "LIMIT 1",
+                                      {
+                                          {"%categories", categoriesTable},
+                                      });
   query.bindValue(":filepath", catDir.toRelative(mLibrariesPath));
   mDb->exec(query);
 
@@ -451,55 +453,54 @@ bool WorkspaceLibraryDb::getCategoryMetadata(const QString& categoriesTable,
 }
 
 AttributeList WorkspaceLibraryDb::getPartAttributes(int partId) const {
-  QSqlQuery query = mDb->prepareQuery(
-      "SELECT key, type, value, unit FROM parts_attr "
-      "WHERE part_id = :part_id");
+  QSqlQuery query =
+      mDb->prepareQuery("SELECT key, type, value, unit FROM parts_attr "
+                        "WHERE part_id = :part_id");
   query.bindValue(":part_id", partId);
   mDb->exec(query);
 
   AttributeList attributes;
   while (query.next()) {
-    const AttributeKey key(query.value(0).toString());  // can throw
-    const AttributeType* type =
-        &AttributeType::fromString(query.value(1).toString());  // can throw
+    const AttributeKey key(query.value(0).toString()); // can throw
+    const AttributeType *type =
+        &AttributeType::fromString(query.value(1).toString()); // can throw
     const QString value = query.value(2).toString();
-    const AttributeUnit* unit =
+    const AttributeUnit *unit =
         type->getUnitFromString(query.value(3).toString());
     attributes.append(std::make_shared<Attribute>(key, *type, value, unit));
   }
   return attributes;
 }
 
-QSet<Uuid> WorkspaceLibraryDb::getChilds(
-    const QString& categoriesTable,
-    const tl::optional<Uuid>& categoryUuid) const {
+QSet<Uuid>
+WorkspaceLibraryDb::getChilds(const QString &categoriesTable,
+                              const tl::optional<Uuid> &categoryUuid) const {
   QSqlQuery query;
   SQLiteDatabase::Replacements replacements = {
       {"%categories", categoriesTable},
   };
   if (categoryUuid) {
-    query = mDb->prepareQuery(
-        "SELECT uuid FROM %categories "
-        "WHERE parent_uuid = :category_uuid "
-        "GROUP BY uuid",
-        replacements);
+    query = mDb->prepareQuery("SELECT uuid FROM %categories "
+                              "WHERE parent_uuid = :category_uuid "
+                              "GROUP BY uuid",
+                              replacements);
     query.bindValue(":category_uuid", categoryUuid->toStr());
   } else {
-    query = mDb->prepareQuery(
-        "SELECT children.uuid FROM %categories AS children "
-        "LEFT JOIN %categories AS parents "
-        "ON children.parent_uuid = parents.uuid "
-        "WHERE parents.uuid IS NULL "
-        "GROUP BY children.uuid",
-        replacements);
+    query =
+        mDb->prepareQuery("SELECT children.uuid FROM %categories AS children "
+                          "LEFT JOIN %categories AS parents "
+                          "ON children.parent_uuid = parents.uuid "
+                          "WHERE parents.uuid IS NULL "
+                          "GROUP BY children.uuid",
+                          replacements);
   }
   mDb->exec(query);
   return getUuidSet(query);
 }
 
-QSet<Uuid> WorkspaceLibraryDb::getByCategory(const QString& elementsTable,
-                                             const QString& categoryTable,
-                                             const tl::optional<Uuid>& category,
+QSet<Uuid> WorkspaceLibraryDb::getByCategory(const QString &elementsTable,
+                                             const QString &categoryTable,
+                                             const tl::optional<Uuid> &category,
                                              int limit) const {
   QSqlQuery query;
   SQLiteDatabase::Replacements replacements = {
@@ -508,56 +509,55 @@ QSet<Uuid> WorkspaceLibraryDb::getByCategory(const QString& elementsTable,
   };
   if (category) {
     // Find all elements assigned to the specified category.
-    query = mDb->prepareQuery(
-        "SELECT %elements.uuid FROM %elements "
-        "INNER JOIN %elements_cat "
-        "ON %elements.id = %elements_cat.element_id "
-        "WHERE category_uuid = :uuid "
-        "GROUP BY uuid "
-        "LIMIT :limit",
-        replacements);
+    query = mDb->prepareQuery("SELECT %elements.uuid FROM %elements "
+                              "INNER JOIN %elements_cat "
+                              "ON %elements.id = %elements_cat.element_id "
+                              "WHERE category_uuid = :uuid "
+                              "GROUP BY uuid "
+                              "LIMIT :limit",
+                              replacements);
     query.bindValue(":uuid", category->toStr());
   } else {
     // Find all elements with no (existent) category.
-    query = mDb->prepareQuery(
-        "SELECT %elements.uuid FROM %elements "
-        "LEFT JOIN %elements_cat "
-        "ON %elements.id = %elements_cat.element_id "
-        "LEFT JOIN %categories "
-        "ON %elements_cat.category_uuid = %categories.uuid "
-        "GROUP BY %elements.uuid "
-        "HAVING COUNT(%categories.uuid) = 0 "
-        "LIMIT :limit",
-        replacements);
+    query =
+        mDb->prepareQuery("SELECT %elements.uuid FROM %elements "
+                          "LEFT JOIN %elements_cat "
+                          "ON %elements.id = %elements_cat.element_id "
+                          "LEFT JOIN %categories "
+                          "ON %elements_cat.category_uuid = %categories.uuid "
+                          "GROUP BY %elements.uuid "
+                          "HAVING COUNT(%categories.uuid) = 0 "
+                          "LIMIT :limit",
+                          replacements);
   }
   query.bindValue(":limit", limit);
   mDb->exec(query);
   return getUuidSet(query);
 }
 
-QSet<Uuid> WorkspaceLibraryDb::getUuidSet(QSqlQuery& query) {
+QSet<Uuid> WorkspaceLibraryDb::getUuidSet(QSqlQuery &query) {
   QSet<Uuid> uuids;
   while (query.next()) {
-    uuids.insert(Uuid::fromString(query.value(0).toString()));  // can throw
+    uuids.insert(Uuid::fromString(query.value(0).toString())); // can throw
   }
   return uuids;
 }
 
 int WorkspaceLibraryDb::getDbVersion() const noexcept {
   try {
-    QSqlQuery query = mDb->prepareQuery(
-        "SELECT value_int FROM internal "
-        "WHERE key = 'version'");
+    QSqlQuery query = mDb->prepareQuery("SELECT value_int FROM internal "
+                                        "WHERE key = 'version'");
     mDb->exec(query);
     if (query.next()) {
       bool ok = false;
       int version = query.value(0).toInt(&ok);
-      if (!ok) throw LogicError(__FILE__, __LINE__);
+      if (!ok)
+        throw LogicError(__FILE__, __LINE__);
       return version;
     } else {
       throw LogicError(__FILE__, __LINE__);
     }
-  } catch (const Exception& e) {
+  } catch (const Exception &e) {
     return -1;
   }
 }
@@ -591,4 +591,4 @@ template QString WorkspaceLibraryDb::getCategoryTable<Device>() noexcept;
  *  End of File
  ******************************************************************************/
 
-}  // namespace librepcb
+} // namespace librepcb
