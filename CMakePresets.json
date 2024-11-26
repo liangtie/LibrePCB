@@ -13,7 +13,7 @@
       },
       "cacheVariables": {
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "USE_OPENCASCAD": "OFF"
+        "USE_OPENCASCADE": "OFF"
       }
     },
     {
