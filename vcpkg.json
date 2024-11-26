@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "kicad",
+  "version": "8.99",
+  "license": "GPL-2.0+",
+  "dependencies": [
+    "zlib"
+  ]
+}
