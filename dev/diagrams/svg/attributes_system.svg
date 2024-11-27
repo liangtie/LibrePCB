@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="83cm" height="52cm" viewBox="-362 -242 1643 1023" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <g id="Background">
+    <rect style="fill: #f1f1f1; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="-360" y="-240" width="1640" height="1020" rx="20" ry="20"/>
+    <rect style="fill: #edffec; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="-340" y="80" width="440" height="160" rx="20" ry="20"/>
+    <rect style="fill: #ffd8db; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="820" y="320" width="440" height="160" rx="20" ry="20"/>
+    <rect style="fill: #d8e5e5; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="-340" y="560" width="440" height="200" rx="20" ry="20"/>
+    <rect style="fill: #e7e9ff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="-340" y="320" width="440" height="160" rx="20" ry="20"/>
+    <rect style="fill: #ffff94; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="540" y="560" width="440" height="200" rx="20" ry="20"/>
+    <rect style="fill: #ffce8e; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #000000" x="240" y="320" width="440" height="160" rx="20" ry="20"/>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="-120,265.172 -120,287 -120,287 -120,320 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="-120,240 -115.2,254 -120,268 -124.8,254 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-118" y="283.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-109" y="252"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-116" y="316">0..*</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="456.1,61.1716 456.1,185 460,185 460,320 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="456.1,36 460.9,50 456.1,64 451.3,50 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="458.05" y="181.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="467.1" y="48"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="464" y="316">0..*</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="214.828,400 163,400 163,400 100,400 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="240,400 226,404.8 212,400 226,395.2 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="163" y="396.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="208" y="396.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="104" y="396.8">1</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="460,505.172 460,660 540,660 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="460,480 464.8,494 460,508 455.2,494 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="500" y="656.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="471" y="492"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="536" y="656.8">0..*</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="280" y="340" width="379.6" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="469.8" y="359">librepcb::project::ComponentInstance</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="280" y="368" width="379.6" height="68"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="283" y="382"> COMPONENT: Name from the library (e.g. "OpAmp")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="283" y="398"> NAME: Unique Designator (e.g. "R5")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="283" y="414"> VALUE: Value of the component (e.g. "100nF")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="283" y="430">+Arbitrary user defined attributes</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="560" y="580" width="402.7" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="761.35" y="599">librepcb::project::SI_Symbol</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="560" y="608" width="402.7" height="20"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="563" y="622"> NAME: Component name + symbol suffix (e.g. "IC7A")</text>
+    </g>
+    <image x="760" y="640" width="191.127" height="117.986" xlink:href="file:///home/urban/.cache/shutter/unsaved/Auswahl_010.png"/>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-260" y="580" width="283.05" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-118.475" y="599">librepcb::project::BI_Footprint</text>
+    </g>
+    <image x="-120" y="620" width="179.077" height="127.41" xlink:href="file:///home/urban/.cache/shutter/unsaved/Auswahl_011.png"/>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-300" y="340" width="356.5" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-121.75" y="359">librepcb::project::BI_Device</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-300" y="368" width="356.5" height="68"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="382"> DEVICE: Name from the library (e.g. "LM358")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="398"> PACKAGE: Name of the package (e.g. "DIP8")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="414"> PARTNUMBER: Part number (e.g. "LM358N")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="430">+Arbitrary user defined attributes</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="-120,505.172 -120,527 -120,527 -120,560 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="-120,480 -115.2,494 -120,508 -124.8,494 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-118" y="523.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-109" y="492"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-116" y="556">1</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="840" y="340" width="379.6" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1029.8" y="359">librepcb::project::Schematic</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="840" y="368" width="379.6" height="52"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="843" y="382"> SHEET: Name of the page (e.g. "Supply Circuit")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="843" y="398"> PAGE: Number of the page (e.g. "5")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="843" y="414">+Arbitrary user defined attributes</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-300" y="100" width="379.6" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="-110.2" y="119">librepcb::project::Board</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="-300" y="128" width="379.6" height="36"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="142"> BOARD: Name of the board (e.g. "THT Prototype")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-297" y="158">+Arbitrary user defined attributes</text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="120" y="-220" width="672.2" height="28"/>
+      <text xml:space="preserve" font-size="16" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="456.1" y="-201">librepcb::project::Project</text>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="120" y="-192" width="672.2" height="228"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-178"> PROJECT: Name of the project (e.g. "Brushless Controller")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-162"> PROJECT_DIRPATH: Absolute path to the project directory (e.g. "/home/me")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-146"> PROJECT_BASENAME: Basename of the project file (e.g. "MyProject")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-130"> PROJECT_FILENAME: Filename of the project file (e.g. "MyProject.lpp")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-114"> PROJECT_FILEPATH: Absolute path to the project file (e.g. "/home/me/MyProject.lpp")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-98"> CREATED_DATE: Date of project creation (e.g. "2017-08-07")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-82"> CREATED_TIME: ime of project creation (e.g. "15:08:22")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-66"> MODIFIED_DATE: Date of last modification (e.g. "2017-08-07")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-50"> MODIFIED_TIME: Time of last modification (e.g. "15:08:22")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-34"> AUTHOR: Name of the author (e.g. "Homer Simpson")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-18"> VERSION: Version number of the project (e.g. "v1.2")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="-2"> PAGES: Count of schematic pages (e.g. "42")</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="14"> PAGE_X_OF_Y: Convenience attribute which always contains "Page {{PAGE}} of {{PAGES}}"</text>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="123" y="30">+Arbitrary user defined attributes</text>
+    </g>
+    <text xml:space="preserve" font-size="11.2776" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-320" y="660">
+      <tspan x="-320" y="660">Text between '{{' and '}}' is</tspan>
+      <tspan x="-320" y="674.097">considered as attribute key</tspan>
+      <tspan x="-320" y="688.194">and will be replaced with the</tspan>
+      <tspan x="-320" y="702.291">corresponding attribute value.</tspan>
+    </text>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="817.372,-102 1040,-102 1040,320 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="792.2,-102 806.2,-106.8 820.2,-102 806.2,-97.2 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="916.1" y="-105.2"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="824.2" y="-105.2"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1044" y="316">1..*</text>
+    </g>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="94.8284,-102 -120,-102 -120,80 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="120,-102 106,-97.2 92,-102 106,-106.8 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="0" y="-105.2"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:end;font-family:monospace;font-style:normal;font-weight:normal" x="88" y="-105.2"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-116" y="76">0..*</text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="900" y1="560" x2="900" y2="488.944"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="907,498.472 900,484.472 893,498.472 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="820" y1="320" x2="793.071" y2="44.9017"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="800.966,53.7023 792.636,40.4509 787.033,55.0662 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="100" y1="80" x2="116.299" y2="44.1426"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="118.729,55.713 118.149,40.0713 105.984,49.9198 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="-20" y1="320" x2="-20" y2="248.944"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="-13,258.472 -20,244.472 -27,258.472 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="-20" y1="560" x2="-20" y2="488.944"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="-13,498.472 -20,484.472 -27,498.472 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="240" y1="360" x2="108.944" y2="360"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="118.472,353 104.472,360 118.472,367 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="100" y1="440" x2="231.056" y2="440"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="221.528,447 235.528,440 221.528,433 "/>
+    </g>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="740" y="180">
+      <tspan x="740" y="180">Lookup</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="120" y="80">
+      <tspan x="120" y="80">Lookup</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="-10" y="530">
+      <tspan x="-10" y="530">Lookup</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="120" y="352">
+      <tspan x="120" y="352">Lookup Prio. 2</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="104" y="432">
+      <tspan x="104" y="432">Lookup Prio. 2</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="780" y="520">
+      <tspan x="780" y="520">Lookup Prio. 1</tspan>
+    </text>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="-10" y="280">
+      <tspan x="-10" y="280">Lookup Prio. 1</tspan>
+    </text>
+    <g>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="1040,505.172 1040,660 980,660 "/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="1040,480 1044.8,494 1040,508 1035.2,494 "/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:normal" x="1010" y="656.8"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1051" y="492"/>
+      <text xml:space="preserve" font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="984" y="656.8">0..*</text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="600" y1="560" x2="600" y2="488.944"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="607,498.472 600,484.472 593,498.472 "/>
+    </g>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="610" y="520">
+      <tspan x="610" y="520">Lookup Prio. 2</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" x1="400" y1="320" x2="400" y2="48.9443"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 4; stroke: #ff0000" points="407,58.4721 400,44.4721 393,58.4721 "/>
+    </g>
+    <text xml:space="preserve" font-size="14.1563" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="280" y="160">
+      <tspan x="280" y="160">Lookup Prio. 1</tspan>
+    </text>
+    <text xml:space="preserve" font-size="11.2776" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="560" y="680">
+      <tspan x="560" y="680">Text between '{{' and '}}' is</tspan>
+      <tspan x="560" y="694.097">considered as attribute key</tspan>
+      <tspan x="560" y="708.194">and will be replaced with the</tspan>
+      <tspan x="560" y="722.291">corresponding attribute value.</tspan>
+    </text>
+  </g>
+</svg>

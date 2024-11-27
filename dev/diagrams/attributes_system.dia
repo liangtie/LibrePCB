@@ -1,0 +1,3567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dia:diagram xmlns:dia="http://www.lysator.liu.se/~alla/dia/">
+  <dia:diagramdata>
+    <dia:attribute name="background">
+      <dia:color val="#ffffffff"/>
+    </dia:attribute>
+    <dia:attribute name="pagebreak">
+      <dia:color val="#000099ff"/>
+    </dia:attribute>
+    <dia:attribute name="paper">
+      <dia:composite type="paper">
+        <dia:attribute name="name">
+          <dia:string>#A4#</dia:string>
+        </dia:attribute>
+        <dia:attribute name="tmargin">
+          <dia:real val="2.8222000598907471"/>
+        </dia:attribute>
+        <dia:attribute name="bmargin">
+          <dia:real val="2.8222000598907471"/>
+        </dia:attribute>
+        <dia:attribute name="lmargin">
+          <dia:real val="2.8222000598907471"/>
+        </dia:attribute>
+        <dia:attribute name="rmargin">
+          <dia:real val="2.8222000598907471"/>
+        </dia:attribute>
+        <dia:attribute name="is_portrait">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="scaling">
+          <dia:real val="0.29300364851951599"/>
+        </dia:attribute>
+        <dia:attribute name="fitto">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="fitwidth">
+          <dia:int val="1"/>
+        </dia:attribute>
+        <dia:attribute name="fitheight">
+          <dia:int val="1"/>
+        </dia:attribute>
+      </dia:composite>
+    </dia:attribute>
+    <dia:attribute name="grid">
+      <dia:composite type="grid">
+        <dia:attribute name="dynamic">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="width_x">
+          <dia:real val="1"/>
+        </dia:attribute>
+        <dia:attribute name="width_y">
+          <dia:real val="1"/>
+        </dia:attribute>
+        <dia:attribute name="visible_x">
+          <dia:int val="1"/>
+        </dia:attribute>
+        <dia:attribute name="visible_y">
+          <dia:int val="1"/>
+        </dia:attribute>
+        <dia:composite type="color"/>
+      </dia:composite>
+    </dia:attribute>
+    <dia:attribute name="color">
+      <dia:color val="#d8e5e5ff"/>
+    </dia:attribute>
+    <dia:attribute name="guides">
+      <dia:composite type="guides">
+        <dia:attribute name="hguides"/>
+        <dia:attribute name="vguides"/>
+      </dia:composite>
+    </dia:attribute>
+    <dia:attribute name="display">
+      <dia:composite type="display">
+        <dia:attribute name="antialiased">
+          <dia:boolean val="false"/>
+        </dia:attribute>
+        <dia:attribute name="snap-to-grid">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="snap-to-object">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="show-grid">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+        <dia:attribute name="show-connection-points">
+          <dia:boolean val="true"/>
+        </dia:attribute>
+      </dia:composite>
+    </dia:attribute>
+  </dia:diagramdata>
+  <dia:layer name="Background" visible="true" connectable="true" active="true">
+    <dia:object type="Standard - Box" version="0" id="O0">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-18,-12"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-18.05,-12.05;64.05,39.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-18,-12"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="82"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="51"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#f1f1f1ff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O1">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-17,4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-17.05,3.95;5.05,12.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-17,4"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="8"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#edffecff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O2">
+      <dia:attribute name="obj_pos">
+        <dia:point val="41,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="40.95,15.95;63.05,24.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="41,16"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="8"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#ffd8dbff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O3">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-17,28"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-17.05,27.95;5.05,38.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-17,28"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="10"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#d8e5e5ff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O4">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-17,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-17.05,15.95;5.05,24.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-17,16"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="8"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#e7e9ffff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O5">
+      <dia:attribute name="obj_pos">
+        <dia:point val="27,28"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="26.95,27.95;49.05,38.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="27,28"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="10"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#ffff94ff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Box" version="0" id="O6">
+      <dia:attribute name="obj_pos">
+        <dia:point val="12,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="11.95,15.95;34.05,24.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="12,16"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="22"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="8"/>
+      </dia:attribute>
+      <dia:attribute name="border_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="inner_color">
+        <dia:color val="#ffce8eff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="corner_radius">
+        <dia:real val="1"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O7">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-6,12"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-6.75,11.25;-4.26,16.8"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="-6,12"/>
+        <dia:point val="-6,14.35"/>
+        <dia:point val="-6,14.35"/>
+        <dia:point val="-6,16"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#0..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O1" connection="6"/>
+        <dia:connection handle="1" to="O4" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O8">
+      <dia:attribute name="obj_pos">
+        <dia:point val="22.805,1.8"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="22.055,1.05;24.74,16.8"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="22.805,1.8"/>
+        <dia:point val="22.805,9.25"/>
+        <dia:point val="23,9.25"/>
+        <dia:point val="23,16"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#0..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O20" connection="6"/>
+        <dia:connection handle="1" to="O6" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O9">
+      <dia:attribute name="obj_pos">
+        <dia:point val="12,20"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="4.95,19.24;12.75,20.84"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="12,20"/>
+        <dia:point val="8.15,20"/>
+        <dia:point val="8.15,20"/>
+        <dia:point val="5,20"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#1#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O6" connection="3"/>
+        <dia:connection handle="1" to="O4" connection="4"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O10">
+      <dia:attribute name="obj_pos">
+        <dia:point val="23,24"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="22.25,23.25;27.05,33.84"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="23,24"/>
+        <dia:point val="23,33"/>
+        <dia:point val="27,33"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#0..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O6" connection="6"/>
+        <dia:connection handle="1" to="O5" connection="3"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O11">
+      <dia:attribute name="obj_pos">
+        <dia:point val="14,17"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="13.95,16.95;33.03,21.85"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="14,17"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="18.98"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="4.8000000000000007"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::ComponentInstance#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#COMPONENT#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name from the library (e.g. "OpAmp")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#NAME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Unique Designator (e.g. "R5")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#VALUE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Value of the component (e.g. "100nF")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#Arbitrary user defined attributes#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O12">
+      <dia:attribute name="obj_pos">
+        <dia:point val="28,29"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="27.95,28.95;48.185,31.45"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="28,29"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="20.134999999999998"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="2.3999999999999999"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::SI_Symbol#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#NAME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Component name + symbol suffix (e.g. "IC7A")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="Standard - Image" version="0" id="O13">
+      <dia:attribute name="obj_pos">
+        <dia:point val="38,32"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="38,32;47.5564,37.8993"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="38,32"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="9.5563650131225586"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="5.8993203013968865"/>
+      </dia:attribute>
+      <dia:attribute name="draw_border">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="keep_aspect">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="file">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="inline_data">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="pixbuf">
+        <dia:composite type="pixbuf">
+          <dia:attribute name="data">
+            <dia:data>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</dia:data>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O14">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-13,29"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-13.05,28.95;1.2025,30.45"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-13,29"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="14.1525"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="1.3999999999999999"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::BI_Footprint#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes"/>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="Standard - Image" version="0" id="O15">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-6,31"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-6,31;2.95385,37.3705"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-6,31"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="8.9538478851318359"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="6.370524825836096"/>
+      </dia:attribute>
+      <dia:attribute name="draw_border">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="keep_aspect">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="file">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="inline_data">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="pixbuf">
+        <dia:composite type="pixbuf">
+          <dia:attribute name="data">
+            <dia:data>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</dia:data>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O16">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-15,17"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-15.05,16.95;2.875,21.85"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-15,17"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="17.824999999999999"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="4.8000000000000007"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::BI_Device#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#DEVICE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name from the library (e.g. "LM358")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PACKAGE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name of the package (e.g. "DIP8")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PARTNUMBER#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Part number (e.g. "LM358N")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#Arbitrary user defined attributes#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O17">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-6,24"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-6.75,23.25;-5.25,28.8"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="-6,24"/>
+        <dia:point val="-6,26.35"/>
+        <dia:point val="-6,26.35"/>
+        <dia:point val="-6,28"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#1#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O4" connection="6"/>
+        <dia:connection handle="1" to="O3" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O18">
+      <dia:attribute name="obj_pos">
+        <dia:point val="42,17"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="41.95,16.95;61.03,21.05"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="42,17"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="18.98"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="4"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::Schematic#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#SHEET#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name of the page (e.g. "Supply Circuit")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PAGE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Number of the page (e.g. "5")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#Arbitrary user defined attributes#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O19">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-15,5"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-15.05,4.95;4.03,8.25"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="-15,5"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="18.98"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="3.2000000000000002"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::Board#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#BOARD#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name of the board (e.g. "THT Prototype")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#Arbitrary user defined attributes#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="UML - Class" version="0" id="O20">
+      <dia:attribute name="obj_pos">
+        <dia:point val="6,-11"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="5.95,-11.05;39.66,1.85"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="6,-11"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="33.609999999999999"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="12.800000000000002"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>#librepcb::project::Project#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="stereotype">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="comment">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="abstract">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_attributes">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="suppress_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_attributes">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="visible_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="visible_comments">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_operations">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="wrap_after_char">
+        <dia:int val="40"/>
+      </dia:attribute>
+      <dia:attribute name="comment_line_length">
+        <dia:int val="17"/>
+      </dia:attribute>
+      <dia:attribute name="comment_tagging">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="allow_resizing">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="fill_color">
+        <dia:color val="#ffffffff"/>
+      </dia:attribute>
+      <dia:attribute name="text_color">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font">
+        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font">
+        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font">
+        <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font">
+        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font">
+        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+      </dia:attribute>
+      <dia:attribute name="normal_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="polymorphic_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_font_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="abstract_classname_font_height">
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="comment_font_height">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="attributes">
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PROJECT#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name of the project (e.g. "Brushless Controller")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PROJECT_DIRPATH#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Absolute path to the project directory (e.g. "/home/me")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PROJECT_BASENAME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Basename of the project file (e.g. "MyProject")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PROJECT_FILENAME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Filename of the project file (e.g. "MyProject.lpp")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PROJECT_FILEPATH#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Absolute path to the project file (e.g. "/home/me/MyProject.lpp")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#CREATED_DATE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Date of project creation (e.g. "2017-08-07")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#CREATED_TIME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#ime of project creation (e.g. "15:08:22")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#MODIFIED_DATE#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Date of last modification (e.g. "2017-08-07")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#MODIFIED_TIME#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Time of last modification (e.g. "15:08:22")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#AUTHOR#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Name of the author (e.g. "Homer Simpson")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#VERSION#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Version number of the project (e.g. "v1.2")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PAGES#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Count of schematic pages (e.g. "42")#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#PAGE_X_OF_Y#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#Convenience attribute which always contains "Page {{PAGE}} of {{PAGES}}"#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#Arbitrary user defined attributes#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="operations"/>
+      <dia:attribute name="template">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="templates"/>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O21">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-16,33"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-16,32.4586;-7.40606,35.2799"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Text between '{{' and '}}' is
+considered as attribute key
+and will be replaced with the
+corresponding attribute value.#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.70484995672504169"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="-16,33"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O22">
+      <dia:attribute name="obj_pos">
+        <dia:point val="39.61,-5.1"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="38.86,-5.86;53.74,16.8"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="39.61,-5.1"/>
+        <dia:point val="52,-5.1"/>
+        <dia:point val="52,16"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#1..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O20" connection="19"/>
+        <dia:connection handle="1" to="O2" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O23">
+      <dia:attribute name="obj_pos">
+        <dia:point val="6,-5.1"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-6.05,-5.86;6.75,4.8"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="6,-5.1"/>
+        <dia:point val="-6,-5.1"/>
+        <dia:point val="-6,4"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#0..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O20" connection="18"/>
+        <dia:connection handle="1" to="O1" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O24">
+      <dia:attribute name="obj_pos">
+        <dia:point val="45,28"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="44.4882,23.9;45.5118,28.1"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="45,28"/>
+        <dia:point val="45,24"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O25">
+      <dia:attribute name="obj_pos">
+        <dia:point val="41,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="39.2004,1.69073;41.1093,16.1093"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="41,16"/>
+        <dia:point val="39.61,1.8"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O2" connection="0"/>
+        <dia:connection handle="1" to="O20" connection="7"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O26">
+      <dia:attribute name="obj_pos">
+        <dia:point val="5,4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="4.86758,1.66758;6.13242,4.13242"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="5,4"/>
+        <dia:point val="6,1.8"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O1" connection="2"/>
+        <dia:connection handle="1" to="O20" connection="5"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O27">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-1,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-1.5118,11.9;-0.488197,16.1"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="-1,16"/>
+        <dia:point val="-1,12"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O28">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-1,28"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-1.5118,23.9;-0.488197,28.1"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="-1,28"/>
+        <dia:point val="-1,24"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O29">
+      <dia:attribute name="obj_pos">
+        <dia:point val="12,18"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="4.9,17.4882;12.1,18.5118"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="12,18"/>
+        <dia:point val="5,18"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O30">
+      <dia:attribute name="obj_pos">
+        <dia:point val="5,22"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="4.9,21.4882;12.1,22.5118"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="5,22"/>
+        <dia:point val="12,22"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O31">
+      <dia:attribute name="obj_pos">
+        <dia:point val="37,9"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="37,8.3425;39.9,9.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="37,9"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O32">
+      <dia:attribute name="obj_pos">
+        <dia:point val="6,4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="6,3.3425;8.9,4.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="6,4"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O33">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-0.5,26.5"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.5,25.8425;2.4,26.6675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="-0.5,26.5"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O34">
+      <dia:attribute name="obj_pos">
+        <dia:point val="6,17.6"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="6,16.9425;11.7525,17.7675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 2#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="6,17.6"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O35">
+      <dia:attribute name="obj_pos">
+        <dia:point val="5.2,21.6"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="5.2,20.9425;10.9525,21.7675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 2#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="5.2,21.6"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O36">
+      <dia:attribute name="obj_pos">
+        <dia:point val="39,26"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="39,25.3425;44.7525,26.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 1#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="39,26"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O37">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-0.5,14"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.5,13.3425;5.2525,14.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 1#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="-0.5,14"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O38">
+      <dia:attribute name="obj_pos">
+        <dia:point val="52,24"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="48.95,23.25;52.75,33.84"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="52,24"/>
+        <dia:point val="52,33"/>
+        <dia:point val="49,33"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="2"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#0..*#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_font">
+        <dia:font family="monospace" style="0" name="Courier"/>
+      </dia:attribute>
+      <dia:attribute name="text_height">
+        <dia:real val="0.80000000000000004"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000ff"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O2" connection="6"/>
+        <dia:connection handle="1" to="O5" connection="4"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O39">
+      <dia:attribute name="obj_pos">
+        <dia:point val="30,28"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="29.4882,23.9;30.5118,28.1"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="30,28"/>
+        <dia:point val="30,24"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O40">
+      <dia:attribute name="obj_pos">
+        <dia:point val="30.5,26"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="30.5,25.3425;36.2525,26.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 2#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="30.5,26"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Line" version="0" id="O41">
+      <dia:attribute name="obj_pos">
+        <dia:point val="20,16"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="19.4882,1.9;20.5118,16.1"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="20,16"/>
+        <dia:point val="20,2"/>
+      </dia:attribute>
+      <dia:attribute name="numcp">
+        <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="line_color">
+        <dia:color val="#ff0000ff"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.20000000298023224"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.69999999999999996"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O42">
+      <dia:attribute name="obj_pos">
+        <dia:point val="14,8"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="14,7.3425;19.7525,8.1675"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Lookup Prio. 1#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.88476662992503918"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="14,8"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#ff0000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O43">
+      <dia:attribute name="obj_pos">
+        <dia:point val="28,34"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="28,33.475;36.5775,36.247"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Text between '{{' and '}}' is
+considered as attribute key
+and will be replaced with the
+corresponding attribute value.#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.70484995672504169"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="28,34"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000ff"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+  </dia:layer>
+</dia:diagram>
