@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.5...3.19)
 if(${CMAKE_VERSION} VERSION_LESS 3.12)
   cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
 endif()
-
+set(USE_OPENCASCADE OFF)
 # Support older macOS versions. Needs to be set before calling project()!
 # https://github.com/LibrePCB/LibrePCB/issues/1091
 set(CMAKE_OSX_DEPLOYMENT_TARGET

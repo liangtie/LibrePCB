@@ -5,15 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(Windows) Launch",
+            "name": "Debug Qt Application with Visual Studio Debugger",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/apps/librepcb/librepcb.exe",
-            "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
-        }
+            "cwd": "${workspaceFolder}",
+            // "visualizerFile": "${command:qt-cpp.natvis}",
+            "visualizerFile": "${workspaceFolder}/qt5.natvis",
+            "windows": {
+                "environment": [
+                    {
+                        "name": "PATH",
+                        "value": "${env:PATH};${command:qt-cpp.kitDirectory}${/}bin"
+                    }
+                ]
+            }
+        },
     ]
 }
